@@ -45,6 +45,7 @@
                 <option value="estilos">CSS</option>
                 <option value="js">JavaScript</option>
                 <option value="php">PHP</option>
+                <option value="git">Git</option>
                 <option value="laravel">Laravel</option>
                 <option value="tailwind">Tailwind</option>
             </select>

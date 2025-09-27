@@ -5,7 +5,7 @@
 	<p class="font-sans text-gray-600 dark:text-gray-300 mb-4">Paso 1: Define las clases base y de variantes en tu archivo CSS
 	Crea un archivo CSS principal (por ejemplo, styles.css) y añade las siguientes reglas dentro de la capa @layer components. Esto asegura que tus estilos personalizados tengan la especificidad correcta y no anulen las utilidades por defecto.</p>
 
-	<pre class="rounded">
+	<pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
 	  <code class="language-javascript">
 	    @import "tailwindcss";
 
