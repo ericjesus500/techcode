@@ -33,7 +33,7 @@ class ManualController extends Controller
     {
         ob_clean();
 
-        $rutaNivel = "../app/Views/manual/{$slug}/{$nivel}.php";
+        $rutaNivel = "../app/Views/manual/{$slug}/niveles/{$nivel}/index.php";
 
         if (!file_exists($rutaNivel)) {
             http_response_code(404);

@@ -1,8 +1,6 @@
-<section class="space-y-8">
-  <h2 class="text-2xl font-bold text-gray-800 dark:text-white">📚 Nivel Básico - TAILWIND</h2>
-  <!-- Capítulo 1: El Poder de Tailwind -->
-  <article class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-    <h3 class="text-xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 1: El Poder de Tailwind</h3>
+<!-- Capítulo 1: El Poder de Tailwind -->
+  <article id="cap01" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+    <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 1: El Poder de Tailwind</h3>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En este capítulo conoceremos todo lo que es posible realizar con Tailwind.</p>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Para un aprendizaje óptimo de Tailwind CSS desde cero, los fundamentos más relevantes e importantes se centran en cambiar el enfoque tradicional del CSS y comprender cómo funciona su metodología de "primero utilidades".</p>
 
@@ -262,44 +260,13 @@
       </div>
     </div>        
 
+    <!-- Ejercicios -->
     <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
       <h4 class="text-xl font-mono font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
       <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
           <li><a href="./ejercicios/basicos/tailwind/01" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
           <li><a href="./ejercicios/basicos/tailwind/02" target="_blank">Componente de tarjeta en un framework (React)</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/03" target="_blank">Cómo añadir tipografías personalizadas</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/04" target="_blank"></a></li>
-          <li><a href="./ejercicios/basicos/tailwind/05" target="_blank"></a></li>
-      </ol>
-    </div>
-
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4"></p>
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4"></p>
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4"></p>
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4"></p>
-    <h3 class="text-xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4"></h3>
-    <h3 class="text-xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4"></h3>
-    <h3 class="text-xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4"></h3>
-    <h4 class="mt-10 text-xl font-mono text-gray-300 dark:text-yellow-400"></h4>
-    <h4 class="mt-10 text-xl font-mono text-gray-300 dark:text-yellow-400"></h4>
-    <h4 class="mt-10 text-xl font-mono text-gray-300 dark:text-yellow-400"></h4>
-    <ul class="list-disc ml-5 mt-5">
-      <li class="font-serif"><span class="text-gray-700 dark:text-blue-500"></span>: .</li>
-      <li class="font-serif"><span class="text-gray-700 dark:text-blue-500"></span>: .</li>
-      <li class="font-serif"><span class="text-gray-700 dark:text-blue-500"></span>: .</li>
-    </ul>
-  </article>
-  <!--  -->
-  <article class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-    <h3 class="text-xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 2: </h3>
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4"></p>
-    <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-      <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-      <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li><a href="./ejercicios/basicos/tailwind/01" target="_blank">Crea un script que imprima tu nombre.</a></li>
-          <li>Declara 3 variables con diferentes tipos de datos.</li>
+          <li><a href="./ejercicios/basicos/tailwind/03" target="_blank">Cómo añadir tipografías personalizadas</a></li>          
       </ol>
     </div>
   </article>
-
-</section>

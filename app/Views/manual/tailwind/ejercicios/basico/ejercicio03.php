@@ -1,5 +1,5 @@
 <h1 class="underline font-mono text-lg text-gray-600 dark:text-pink-600">EJERCICIO 03</h1>
-<h2 class="text-dark-600 dark:text-green-400 mt-7">Cómo añadir tipografías personalizadas</h2>
+<h2 class="text-3xl text-dark-600 dark:text-green-400 mt-7">Cómo añadir tipografías personalizadas</h2>
 <div class="w-full mt-5 mb-10 p-lg-6 p-md-6">
 	<p class="font-sans text-gray-600 dark:text-gray-300 mb-4">Puedes añadir tus propias tipografías al archivo de configuración de Tailwind (tailwind.config.js). Esto es útil si quieres usar fuentes de servicios como Google Fonts o una fuente personalizada alojada localmente.</p>
 	<p class="font-sans text-gray-600 dark:text-gray-300 mb-4">1. Importar la fuente. Primero, importa la fuente en tu archivo CSS principal (por ejemplo, input.css o main.css). Si usas Google Fonts, copia y pega el código @import que te proporcionan:</p>
