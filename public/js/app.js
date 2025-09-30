@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //boton que oculta y muestra el sidebar
     const toggleBtn = document.getElementById('toggle-sidebar');
-    const sidebar = document.querySelector('aside');    
+    const sidebar = document.querySelector('aside');
 
     // Estado inicial desde localStorage
     const isSidebarHidden = localStorage.getItem('sidebarHidden') === 'true';
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (this.checked) {
                         const slug = this.dataset.slug;
                         const nivel = this.dataset.nivel;
-                        cargarNivel(slug, nivel);
+                        cargarNivel(slug, nivel);                        
                     }
                 });
             });
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    function cargarNivel(slug, nivel) {
+    function cargarNivel(slug, nivel) {        
         const nivelContenido = document.getElementById('nivel-contenido');
         nivelContenido.innerHTML = `
             <div class="flex items-center justify-center py-10">
@@ -103,16 +103,58 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.text())
         .then(html => {
-            nivelContenido.innerHTML = html;
-            // ✅ Inicializar Prism.js después de inyectar HTML
-            if (typeof Prism !== 'undefined') {
-                Prism.highlightAll();
-            }
+            nivelContenido.innerHTML = html;            
+            //Obtener capitulos
+            obtenerCapitulo();            
         })
         .catch(error => {
             console.error('Error al cargar el nivel:', error);
             nivelContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el nivel ${nivel}.</div>`;
         });
     }
+
+    //Obtener capitulos del manual y nivel seleccionados
+    function obtenerCapitulo(){        
+        const capitulos = document.querySelectorAll('.capitulos li a');
+        const htmlCapitulo = document.querySelector('#content-capitulo');
+        let data = []
+        capitulos.forEach( capitulo => {
+            capitulo.addEventListener('click', ()=>{
+                const curso = capitulo.dataset.curso;
+                const nivel = capitulo.dataset.nivel;
+                const cap = capitulo.dataset.capitulo;
+                data.push(curso);
+                data.push(nivel);
+                data.push(cap);
+                console.log(data);
+                //enviarFormData(htmlCapitulo)
+                fetch(`/capitulo/verCapitulo/${data}`, {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: JSON.stringify({ curso: curso, nivel: nivel, capitulo: cap })
+                })
+                .then(response => response.text())
+                .then(html => {                    
+                    htmlCapitulo.innerHTML = html;
+                    // ✅ Inicializar Prism.js después de inyectar HTML
+                    if (typeof Prism !== 'undefined') {
+                        Prism.highlightAll();
+                    }                    
+                })
+                .catch(error => {
+                    htmlContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el capítulo.</div>`;
+                });
+                
+                data = [];
+            })
+        })
+    }
+
+    //Enviar data de capitulos con FormData
+    /*function enviarFormaDta(){
+    }*/
+    
 });
 

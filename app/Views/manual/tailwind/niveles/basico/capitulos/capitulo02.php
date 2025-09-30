@@ -44,7 +44,7 @@
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Para crear una tarjeta simple, se aplican las utilidades directamente a un elemento HTML:</p> 
   </div>
   <div class="mt-10">
-    <pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
+    <pre class="language-html bg-gray-300 dark:bg-gray-900 p-4 rounded">
       <code class="language-html">
         &lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;
           &lt;h2 class="text-xl font-bold"&gt;Tarjeta de utilidades&lt;/h2&gt;
@@ -96,7 +96,7 @@
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-800">1. Definición en CSS</span>: En tu archivo CSS de origen (Por ejemplo src/css/tailwind.css), defines el componente usando la directiva <span class="text-gray-600 dark:text-pink-900">@layer components</span>. En la v4, se puede usar <span class="text-gray-600 dark:text-pink-900">@utility</span> para mayor control, aunque <span class="text-gray-600 dark:text-pink-900">@layer components</span> sigue siendo válido para componentes complejos</p> 
   </div>
   <div class="mt-10">
-    <pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
+    <pre class="language-css bg-gray-300 dark:bg-gray-900 p-4 rounded">
       <code class="language-css">
         /* tailwind.css */
         @import "tailwindcss";
