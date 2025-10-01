@@ -126,7 +126,65 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(html => {
             nivelContenido.innerHTML = html;            
             //Obtener capitulos
-            obtenerCapitulo();            
+            obtenerCapitulo();
+             const listaCapitulos = document.getElementById('lista-capitulos');
+            const toggleButton = document.getElementById('toggleCapitulos');            
+            const linksCapitulos = document.querySelectorAll('#lista-capitulos a');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
+
+            // Inicialmente la lista de capítulos está visible
+            let listaVisible = true;
+            iconMenu.classList.add('hidden'); // Oculta el ícono de menú al inicio
+            iconClose.classList.remove('hidden'); // Muestra el ícono de cerrar al inicio
+
+            // Función para animar el cambio de visibilidad
+            const toggleVisibility = () => {
+                if (listaVisible) {
+                    listaCapitulos.classList.remove('opacity-100', 'scale-100');
+                    listaCapitulos.classList.add('opacity-0', 'scale-95');
+                    // Oculta el menú después de la transición
+                    setTimeout(() => listaCapitulos.style.display = 'none', 300);
+                } else {
+                    listaCapitulos.style.display = 'flex';
+                    // Usa un pequeño retraso para permitir que el 'display' se aplique antes de iniciar la transición
+                    setTimeout(() => {
+                        listaCapitulos.classList.remove('opacity-0', 'scale-95');
+                        listaCapitulos.classList.add('opacity-100', 'scale-100');
+                    }, 10);
+                }
+                iconMenu.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+                listaVisible = !listaVisible;
+            };
+
+            toggleButton.addEventListener('click', toggleVisibility);
+
+            // Maneja la selección de capítulos
+            linksCapitulos.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const capituloSeleccionado = e.target;
+                    const capituloTexto = capituloSeleccionado.textContent;
+
+                    // Oculta la lista con animación
+                    if (listaVisible) {
+                        toggleVisibility();
+                    }
+
+                    // Agrega el evento al botón de "Volver a la lista"
+                    document.getElementById('volverLista').addEventListener('click', () => {
+                        // Anima la salida del contenido del capítulo
+                        const contentDiv = document.querySelector('#content-capitulo > div');
+                        contentDiv.classList.remove('opacity-100', 'scale-100');
+                        contentDiv.classList.add('opacity-0', 'scale-95');
+                        setTimeout(() => {
+                            contentCapitulo.innerHTML = '';
+                            toggleVisibility(); // Muestra la lista con animación
+                        }, 300);
+                    });
+                });
+            });
         })
         .catch(error => {
             console.error('Error al cargar el nivel:', error);

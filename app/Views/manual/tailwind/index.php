@@ -1,53 +1,86 @@
 <!-- Header del manual -->
 <div class="mb-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col justify-between sm:flex-row md:flex-row gap-4 items-center">
-    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">📘 Manual de TAILWIND</h2>
-    <div class="flex justify-end flex-1">
-        <a class="font-mono mr-5 text-gray-800 dark:text-blue-300" href="https://tailwindcss.com/docs/styling-with-utility-classes" target="_blank">Tailwind.com</a>
-        <a class="font-mono mr-5 text-gray-800 dark:text-blue-300" href="https://nerdcave.com/tailwind-cheat-sheet?spm=a2ty_o01.29997173.0.0.43aa5171ba9oAl" target="_blank">CheatSheet</a>        
+    <div class="w-3/4">
+        <div class="prose dark:prose-invert max-w-none">
+            <div class="flex items-center justify-between">
+                <!-- Radio buttons -->
+                <div class="space-x-6 w-3/4">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="nivel-tailwind" value="basico" class="nivel-radio form-radio h-5 w-5 text-blue-600" data-slug="tailwind" data-nivel="basico">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Básico</span>
+                    </label>
+
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="nivel-tailwind" value="intermedio" class="nivel-radio form-radio h-5 w-5 text-green-600" data-slug="tailwind" data-nivel="intermedio">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Intermedio</span>
+                    </label>
+
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="nivel-tailwind" value="avanzado" class="nivel-radio form-radio h-5 w-5 text-purple-600" data-slug="tailwind" data-nivel="avanzado">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Avanzado</span>
+                    </label>
+                </div>
+                <!-- Búsqueda -->
+                <div class="busqueda w-1/4">
+                    <button id="abrirModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Buscar Tema
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-1/4">
+        <div class="flex justify-end flex-1">
+            <a class="font-mono mr-5 text-gray-800 dark:text-blue-300" href="https://tailwindcss.com/docs/styling-with-utility-classes" target="_blank">Tailwind.com</a>
+            <a class="font-mono mr-5 text-gray-800 dark:text-blue-300" href="https://nerdcave.com/tailwind-cheat-sheet?spm=a2ty_o01.29997173.0.0.43aa5171ba9oAl" target="_blank">CheatSheet</a>
+        </div>        
     </div>
 </div>
 
 <div class="flex gap-x-4">
   <div class="w-3/4">
-    <!-- Contenido del primer hijo (75%) -->
+    <!-- Contenido del primer hijo (75%) (Radio buttons + Búsqueda) + Contenido del nivel -->
     <div class="prose dark:prose-invert max-w-none">
-        <div class="flex items-center justify-between">
-            <!-- Radio buttons -->
-            <div class="space-x-6 w-3/4">
-                <label class="inline-flex items-center">
-                    <input type="radio" name="nivel-tailwind" value="basico" class="nivel-radio form-radio h-5 w-5 text-blue-600" data-slug="tailwind" data-nivel="basico">
-                    <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Básico</span>
-                </label>
-
-                <label class="inline-flex items-center">
-                    <input type="radio" name="nivel-tailwind" value="intermedio" class="nivel-radio form-radio h-5 w-5 text-green-600" data-slug="tailwind" data-nivel="intermedio">
-                    <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Intermedio</span>
-                </label>
-
-                <label class="inline-flex items-center">
-                    <input type="radio" name="nivel-tailwind" value="avanzado" class="nivel-radio form-radio h-5 w-5 text-purple-600" data-slug="tailwind" data-nivel="avanzado">
-                    <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Avanzado</span>
-                </label>
-            </div>
-
-            <!-- Búsqueda -->
-            <div class="busqueda w-1/4">
-                <button id="abrirModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Buscar Tema
-                </button>
-            </div>
-            
-        </div>
-
         <!-- Contenedor para el contenido del nivel -->
-        <div id="nivel-contenido" class="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div id="nivel-contenido" class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <p class="text-gray-500 dark:text-gray-400">Selecciona un nivel para ver su contenido.</p>
         </div>
     </div>
   </div>
   
-  <div class="w-1/4">
+  <div class="sticky top-0 w-1/4">
     <!-- Contenido del segundo hijo (25%) -->
-    
+    <!-- Diálogo del modal -->
+    <div class="bg-white rounded-lg shadow-xl p-6 w-full z-10 relative dark:bg-gray-950">    
+    <!-- Input de búsqueda -->
+    <div class="relative flex-1 max-w-md">
+        <input type="text" 
+               id="buscador-manual" 
+               placeholder="Buscar tema" 
+               class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <!-- Botón para alternar modo de búsqueda -->
+    <div class="mt-5 flex items-center space-x-2">        
+        <div class="inline-flex rounded-md shadow-sm">
+            <button type="button" 
+                    id="btn-busqueda-local" 
+                    class="px-4 py-2 text-sm font-medium text-blue-700 bg-blue-100 dark:bg-blue-900/30 dark:text-blue-300 rounded-l-md focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Local
+            </button>
+            <button type="button" 
+                    id="btn-busqueda-ia" 
+                    class="px-4 py-2 text-sm font-medium text-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-r-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                IA
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor de resultados -->
+    <div id="resultados-busqueda" class="mt-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg min-h-32">
+        <p class="text-gray-500 dark:text-gray-400">Resultado de la búsqueda</p>
+    </div>
+    </div>
+    <h2>Lista de sub capitulos</h2>
   </div>
 </div>
 
