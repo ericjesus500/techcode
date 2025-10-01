@@ -23,7 +23,7 @@
 
 			//echo "Curso: $curso - Nivel: $nivel  - Capitulo: $capitulo";
 			
-			$url = "../app/Views/manual/$curso/niveles/$nivel/capitulos/capitulo0$capitulo.php";
+			$url = "../app/Views/manual/$curso/niveles/$nivel/capitulos/capitulo$capitulo.php";
 
 			// Verificar que $url exista
       if (!file_exists($url)) {

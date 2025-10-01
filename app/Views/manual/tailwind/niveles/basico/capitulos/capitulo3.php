@@ -1,4 +1,5 @@
 <!-- Capitulo 03: Directivas: @apply y @layer -->
+<hr>
 <article id="cap03" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
   <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 3: Directivas de Tailwind</h3>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Tailwind 4.0 representa un cambio significativo con un motor de alto rendimiento reescrito en Rust y una configuración basada en CSS, dejando atrás las directivas heredadas de la versión 3. Ahora, se integran de forma nativa muchas funcionalidades que antes requerían plugins de PostCSS, simplificando la cadena de herramientas.</p>
@@ -365,9 +366,9 @@
   <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
     <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
     <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-        <li><a href="./ejercicios/basicos/tailwind/06" target="_blank"></a></li>
-        <li><a href="./ejercicios/basicos/tailwind/07" target="_blank"></a></li>
-        <li><a href="./ejercicios/basicos/tailwind/08" target="_blank"></a></li>
+        <li><a href="./ejercicios/basicos/tailwind/6" target="_blank"></a></li>
+        <li><a href="./ejercicios/basicos/tailwind/7" target="_blank"></a></li>
+        <li><a href="./ejercicios/basicos/tailwind/8" target="_blank"></a></li>
     </ol>
   </div>
 

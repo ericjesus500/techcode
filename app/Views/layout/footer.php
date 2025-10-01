@@ -2,6 +2,6 @@
     &copy; 2025 TechCode. Todos los derechos reservados.
 	</footer>
 	<script type="module" src="/js/prism.js"></script>
-	<script src="/js/app.js"></script>
+	<script type="module" src="/js/app.js"></script>	
 </body>
 </html>

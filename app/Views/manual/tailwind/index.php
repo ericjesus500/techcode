@@ -11,22 +11,31 @@
   <div class="w-3/4">
     <!-- Contenido del primer hijo (75%) -->
     <div class="prose dark:prose-invert max-w-none">
-        <!-- Radio buttons -->
-        <div class="flex space-x-6 mb-8">
-            <label class="inline-flex items-center">
-                <input type="radio" name="nivel-tailwind" value="basico" class="nivel-radio form-radio h-5 w-5 text-blue-600" data-slug="tailwind" data-nivel="basico">
-                <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Básico</span>
-            </label>
+        <div class="flex items-center justify-between">
+            <!-- Radio buttons -->
+            <div class="space-x-6 w-3/4">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="nivel-tailwind" value="basico" class="nivel-radio form-radio h-5 w-5 text-blue-600" data-slug="tailwind" data-nivel="basico">
+                    <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Básico</span>
+                </label>
 
-            <label class="inline-flex items-center">
-                <input type="radio" name="nivel-tailwind" value="intermedio" class="nivel-radio form-radio h-5 w-5 text-green-600" data-slug="tailwind" data-nivel="intermedio">
-                <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Intermedio</span>
-            </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="nivel-tailwind" value="intermedio" class="nivel-radio form-radio h-5 w-5 text-green-600" data-slug="tailwind" data-nivel="intermedio">
+                    <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Intermedio</span>
+                </label>
 
-            <label class="inline-flex items-center">
-                <input type="radio" name="nivel-tailwind" value="avanzado" class="nivel-radio form-radio h-5 w-5 text-purple-600" data-slug="tailwind" data-nivel="avanzado">
-                <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Avanzado</span>
-            </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="nivel-tailwind" value="avanzado" class="nivel-radio form-radio h-5 w-5 text-purple-600" data-slug="tailwind" data-nivel="avanzado">
+                    <span class="ml-2 text-gray-700 dark:text-gray-300">🔹 Avanzado</span>
+                </label>
+            </div>
+
+            <!-- Búsqueda -->
+            <div class="busqueda w-1/4">
+                <button id="abrirModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Buscar Tema
+                </button>
+            </div>
+            
         </div>
 
         <!-- Contenedor para el contenido del nivel -->
@@ -38,6 +47,28 @@
   
   <div class="w-1/4">
     <!-- Contenido del segundo hijo (25%) -->
+    
+  </div>
+</div>
+
+<!-- Estructura del Modal -->
+<div id="modalContainer" class="hidden fixed inset-0 flex items-center justify-center z-50">
+  <!-- Overlay (fondo semitransparente) -->
+  <div class="absolute inset-0 bg-gray-900 dark:opacity-50"></div>
+
+  <!-- Diálogo del modal -->
+  <div class="bg-white rounded-lg shadow-xl p-6 m-4 w-full h-screen z-10 relative dark:bg-gray-950">
+    <!-- Encabezado del modal -->
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Escribe una consulta y selecciona el modo de búsqueda.</h2>
+      <!-- Botón de cerrar -->
+      <button id="cerrarModal" class="text-gray-500 hover:text-gray-700">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Contenido del modal -->
     <!-- Input de búsqueda -->
     <div class="relative flex-1 max-w-md">
         <input type="text" 
@@ -64,7 +95,7 @@
 
     <!-- Contenedor de resultados -->
     <div id="resultados-busqueda" class="mt-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg min-h-32">
-        <p class="text-gray-500 dark:text-gray-400">Escribe una consulta y selecciona el modo de búsqueda.</p>
+        <p class="text-gray-500 dark:text-gray-400">Resultado de la búsqueda</p>
     </div>
   </div>
 </div>

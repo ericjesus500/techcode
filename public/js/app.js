@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.querySelector('aside');
 
     // Estado inicial desde localStorage
-    const isSidebarHidden = localStorage.getItem('sidebarHidden') === 'true';
-    if (isSidebarHidden) {
-        sidebar.classList.add('-translate-x-full');        
+    const isSidebarHidden = localStorage.getItem('sidebarHidden') === 'false';
+    if (!isSidebarHidden) {
+        sidebar.classList.remove('-translate-x-full');        
         // Rotar icono
-        toggleBtn.querySelector('svg').classList.add('rotate-180');
+        toggleBtn.querySelector('svg').classList.remove('rotate-180');
     } else {
         sidebar.classList.remove('-translate-x-full');
     }
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleBtn.addEventListener('click', function() {        
         const svg = this.querySelector('svg');
         const contentWrapper = document.getElementById('content-wrapper');
-
+        
         if (sidebar.classList.contains('-translate-x-full')) {
             // Está oculto → mostrarlo
             sidebar.classList.remove('-translate-x-full');
@@ -80,6 +80,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             });
+            /*Funcionalidad del modal*/
+            const abrirModalBtn = document.getElementById('abrirModal');
+            const cerrarModalBtn = document.getElementById('cerrarModal');
+            const modalContainer = document.getElementById('modalContainer');
+
+            // Función para abrir el modal
+            abrirModalBtn.addEventListener('click', () => {
+              modalContainer.classList.remove('hidden');
+            });
+
+            // Función para cerrar el modal
+            cerrarModalBtn.addEventListener('click', () => {
+              modalContainer.classList.add('hidden');
+            });
+
+            // Opcional: Cerrar el modal haciendo clic fuera de él
+            modalContainer.addEventListener('click', (e) => {
+              if (e.target === modalContainer.children[0]) {
+                modalContainer.classList.add('hidden');
+              }
+            });
         })
         .catch(error => {
             manualContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el manual.</div>`;
@@ -126,8 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data.push(curso);
                 data.push(nivel);
                 data.push(cap);
-                console.log(data);
-                //enviarFormData(htmlCapitulo)
+                //console.log(data);                
                 fetch(`/capitulo/verCapitulo/${data}`, {
                     method: 'POST',
                     headers: {
@@ -141,7 +161,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     // ✅ Inicializar Prism.js después de inyectar HTML
                     if (typeof Prism !== 'undefined') {
                         Prism.highlightAll();
-                    }                    
+                    }
+                    
                 })
                 .catch(error => {
                     htmlContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el capítulo.</div>`;
@@ -150,11 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data = [];
             })
         })
-    }
-
-    //Enviar data de capitulos con FormData
-    /*function enviarFormaDta(){
-    }*/
+    }   
     
 });
 

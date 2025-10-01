@@ -1,4 +1,5 @@
 <!-- Capítulo 1: El Poder de Tailwind -->
+  <hr>
   <article id="cap01" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
     <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 1: El Poder de Tailwind</h3>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En este capítulo conoceremos todo lo que es posible realizar con Tailwind.</p>
@@ -264,9 +265,9 @@
     <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
       <h4 class="text-xl font-mono font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
       <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li><a href="./ejercicios/basicos/tailwind/01" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/02" target="_blank">Componente de tarjeta en un framework (React)</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/03" target="_blank">Cómo añadir tipografías personalizadas</a></li>          
+          <li><a href="./ejercicios/basicos/tailwind/1" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
+          <li><a href="./ejercicios/basicos/tailwind/2" target="_blank">Componente de tarjeta en un framework (React)</a></li>
+          <li><a href="./ejercicios/basicos/tailwind/3" target="_blank">Cómo añadir tipografías personalizadas</a></li>          
       </ol>
     </div>
   </article>
