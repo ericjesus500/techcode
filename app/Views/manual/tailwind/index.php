@@ -1,6 +1,6 @@
-<div class="w-full">
+<div class="w-full md:box-border lg:box-border">
     <!-- Header del manual -->
-    <div class="w-full mb-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col justify-between sm:flex-row md:flex-row gap-4 items-center">
+    <div class="mb-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col justify-between sm:flex-row md:flex-row gap-4 items-center">
         <!-- (Radio buttons + Búsqueda) -->
         <div class="w-3/4">
             <div class="prose dark:prose-invert max-w-none">
@@ -39,24 +39,24 @@
         </div>
     </div>
     <!-- Contenido del nivel + Modal para busqueda de tema-->
-    <div class="flex gap-x-4">
+    <div class="flex md:flex-row lg:flex-row gap-x-4 md:box-border lg:box-border">
         <!-- primer hijo (75%): Contenedor para el contenido del nivel -->
-        <div class="w-3/4">
-            <div class="prose dark:prose-invert max-w-none">
-                <div id="nivel-contenido" class="w-full p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div class="w-3/4 box-border">
+            <div class="prose dark:prose-invert max-w-full md:box-border lg:box-border">
+                <div id="nivel-contenido" class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg md:box-border lg:box-border">
                     <p class="text-gray-500 dark:text-gray-400">Selecciona un nivel para ver su contenido.</p>
                 </div>
             </div>
         </div>  
         <!-- segundo hijo (25%): Diálogo del modal -->
-        <div class="sticky top-0 w-1/4">
-            <div class="bg-white rounded-lg shadow-xl p-6 w-full z-10 relative dark:bg-gray-950">    
+        <div class="w-1/4 md:box-border lg:box-border">
+            <div class="bg-white rounded-lg shadow-xl p-6 z-10 relative dark:bg-gray-950">    
                 <!-- Input de búsqueda -->
                 <div class="relative flex-1 max-w-md">
                     <input type="text" 
                            id="buscador-manual" 
                            placeholder="Buscar tema" 
-                           class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                           class="max-w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
                 <!-- Botón para alternar modo de búsqueda -->
                 <div class="mt-5 flex items-center space-x-2">        
@@ -89,7 +89,7 @@
   <div class="absolute inset-0 bg-gray-900 dark:opacity-50"></div>
 
   <!-- Diálogo del modal -->
-  <div class="bg-white rounded-lg shadow-xl p-6 m-4 w-full h-screen z-10 relative dark:bg-gray-950">
+  <div class="bg-white rounded-lg shadow-xl p-6 m-4 w-full max-w-full h-screen z-10 relative dark:bg-gray-950">
     <!-- Encabezado del modal -->
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-xl font-bold">Escribe una consulta y selecciona el modo de búsqueda.</h2>

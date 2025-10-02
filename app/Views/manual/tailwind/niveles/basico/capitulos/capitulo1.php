@@ -1,6 +1,6 @@
 <!-- Capítulo 1: El Poder de Tailwind -->
   <hr>
-  <article id="cap01" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+  <article id="cap01" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow md:box-border lg:box-border">
     <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 1: El Poder de Tailwind</h3>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En este capítulo conoceremos todo lo que es posible realizar con Tailwind.</p>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Para un aprendizaje óptimo de Tailwind CSS desde cero, los fundamentos más relevantes e importantes se centran en cambiar el enfoque tradicional del CSS y comprender cómo funciona su metodología de "primero utilidades".</p>

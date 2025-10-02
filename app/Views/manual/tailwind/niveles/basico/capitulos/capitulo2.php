@@ -1,6 +1,6 @@
 <!-- Capitulo 02: Clases de Utilidades y Componentes -->
 <hr>
-<article id="cap02" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+<article id="cap02" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow md:box-border lg:box-border">
   <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 2: Clases de Utilidades y Componentes</h3>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En Tailwind 4, las utilidades son clases de bajo nivel que aplican una única propiedad CSS, mientras que los componentes son abstracciones de estilos reutilizables que agrupan múltiples utilidades.</p>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">La principal diferencia radica en su granularidad: las utilidades se aplican directamente en el HTML para un control preciso, mientras que los componentes son clases personalizadas que encapsulan patrones de diseño comunes.</p>
@@ -97,7 +97,7 @@
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-800">1. Definición en CSS</span>: En tu archivo CSS de origen (Por ejemplo src/css/tailwind.css), defines el componente usando la directiva <span class="text-gray-600 dark:text-pink-900">@layer components</span>. En la v4, se puede usar <span class="text-gray-600 dark:text-pink-900">@utility</span> para mayor control, aunque <span class="text-gray-600 dark:text-pink-900">@layer components</span> sigue siendo válido para componentes complejos</p> 
   </div>
   <div class="mt-10">
-    <pre class="language-css bg-gray-300 dark:bg-gray-900 p-4 rounded">
+    <pre class="language-css bg-gray-300 dark:bg-gray-900 p-4 rounded overflow-x-auto">
       <code class="language-css">
         /* tailwind.css */
         @import "tailwindcss";
@@ -108,12 +108,13 @@
           }
         }
       </code>
-    </pre>  
+    </pre>
   </div>
 
   <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-300 rounded">
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-800">2. Aplicación en HTML</span>: Se usa la clase personalizada en el HTML.</p> 
   </div>
+
   <div class="mt-10">
     <pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
       <code class="language-html">
@@ -126,48 +127,50 @@
 
   <h4 class="my-10 text-xl font-mono text-gray-300 dark:text-yellow-400">Diferencias y cuándo usar cada uno</h4>
 
-  <table class="table-auto border-separate font-mono">
-    <thead>
-      <tr>
-        <th>Característica</th>
-        <th>Utilidades</th>
-        <th>Componentes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="text-sm">
-        <td>Nivel</td>
-        <td>Bajo nivel, granular</td>
-        <td>Alto nivel, abstracto</td>
-      </tr>
-      <tr class="text-sm">
-        <td>Encapsulación</td>
-        <td>No encapsulan lógica</td>
-        <td>Agrupan múltiples utilidades bajo una clase</td>
-      </tr>
-      <tr class="text-sm">
-        <td>Nombre</td>
-        <td>Descriptivo de la propiedad CSS (flex, p-4)</td>
-        <td>Semántico (.btn, .card).</td>
-      </tr>
-      <tr class="text-sm">
-        <td>Reusabilidad</td>
-        <td>Se combinan para crear bloques.</td>
-        <td>Se reutiliza una única clase para un bloque completo.</td>
-      </tr>
-      <tr class="text-sm">
-        <td>Mantenimiento</td>
-        <td>Puede generar HTML verboso.</td>
-        <td>Simplifica el marcado, ideal para patrones repetitivos.</td>
-      </tr>
-      <tr class="text-sm">
-        <td>Uso ideal</td>
-        <td>Para diseño rápido, prototipado y estilos únicos.</td>
-        <td>Para elementos que se repiten con el mismo aspecto (botones, tarjetas, etc.).</td>
-      </tr>
-    </tbody>
-  </table>
-
+  <div class="overflow-x-auto">
+    <table class="table-auto border-separate font-mono">
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Utilidades</th>
+          <th>Componentes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-sm">
+          <td>Nivel</td>
+          <td>Bajo nivel, granular</td>
+          <td>Alto nivel, abstracto</td>
+        </tr>
+        <tr class="text-sm">
+          <td>Encapsulación</td>
+          <td>No encapsulan lógica</td>
+          <td>Agrupan múltiples utilidades bajo una clase</td>
+        </tr>
+        <tr class="text-sm">
+          <td>Nombre</td>
+          <td>Descriptivo de la propiedad CSS (flex, p-4)</td>
+          <td>Semántico (.btn, .card).</td>
+        </tr>
+        <tr class="text-sm">
+          <td>Reusabilidad</td>
+          <td>Se combinan para crear bloques.</td>
+          <td>Se reutiliza una única clase para un bloque completo.</td>
+        </tr>
+        <tr class="text-sm">
+          <td>Mantenimiento</td>
+          <td>Puede generar HTML verboso.</td>
+          <td>Simplifica el marcado, ideal para patrones repetitivos.</td>
+        </tr>
+        <tr class="text-sm">
+          <td>Uso ideal</td>
+          <td>Para diseño rápido, prototipado y estilos únicos.</td>
+          <td>Para elementos que se repiten con el mismo aspecto (botones, tarjetas, etc.).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
   <p class="pathway-extreme-p text-xl underline my-10 text-white">Cuándo usar utilidades vs. componentes:</p>
   <div class="rounded-xl bg-white mt-10 mb-10 p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
     <div class="space-y-6">
@@ -194,10 +197,11 @@
   
   <!-- Ejercicios -->
   <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-    <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
+    <h4 class="text-xl font-mono font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
     <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
         <li><a href="./ejercicios/basicos/tailwind/4" target="_blank">Uso de clases de utilidad</a></li>
         <li><a href="./ejercicios/basicos/tailwind/5" target="_blank">Uso de componentes</a></li>
     </ol>
   </div>
 </article>
+  

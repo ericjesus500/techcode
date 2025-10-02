@@ -1,5 +1,5 @@
 <section class="space-y-8">
-  <div class="flex items-center justify-between">
+  <div class="flex max-w-full items-center justify-between">
     <h2 class="text-2xl font-bold text-gray-800 dark:text-white">📜 Capítulos</h2>
     <button id="toggleCapitulos" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
       <!-- Ícono de menú (visible por defecto) -->
@@ -13,7 +13,7 @@
     </button>
   </div>
 
-  <div id="lista-capitulos" class="flex flex-col w-full mx-auto p-6 rounded border border-gray-600 bg-yellow-600 dark:bg-yellow-100 dark:border-gray-300
+  <div id="lista-capitulos" class="flex flex-col mx-auto p-6 rounded border border-gray-600 bg-yellow-600 dark:bg-yellow-100 dark:border-gray-300
       transition-all duration-300 ease-in-out">
     <ul class="capitulos">
       <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="1">Capitulo 1: El Poder de Tailwind</a></li>
@@ -23,5 +23,5 @@
     </ul>
   </div>
 
-  <div id="content-capitulo"></div>
+  <div id="content-capitulo" class="box-border"></div>
 </section>
