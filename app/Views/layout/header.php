@@ -20,7 +20,7 @@
     <header class="fixed top-0 left-0 right-0 z-20 bg-gray-800 dark:bg-gray-900 text-white shadow-md">
       <div class="flex">
         <!-- Zona 1: Ancho fijo (igual al sidebar) -->
-        <div class="w-64 flex items-center justify-center py-3 bg-gray-900 dark:bg-gray-800">
+        <div class="w-64 flex items-center justify-center py-3 bg-gray-900 dark:bg-gray-900">
           <span class="text-xl font-bold text-blue-400">TechCode</span>
         </div>
 

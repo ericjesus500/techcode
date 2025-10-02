@@ -1,67 +1,67 @@
-<h1 class="underline font-mono text-lg text-gray-600 dark:text-pink-600">EJERCICIO 01</h1>
-<h2 class="text-3xl text-dark-600 dark:text-green-400 mt-7">Creación de un botón reutilizable usando @apply.</h2>
-<div class="w-full mt-5 mb-10 p-lg-6 p-md-6">
-	<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">El enfoque más sencillo para crear un componente reutilizable en Tailwind es utilizando la directiva @apply en tu archivo CSS. Esto es ideal para proyectos sin frameworks de componentes o para elementos que se repiten con frecuencia (como botones, tarjetas o inputs)</p>
-
-	<div class="mt-10 px-6 bg-red-900 dark:bg-yellow-300 rounded">
-		<p class="pathway-extreme-p text-lg text-white dark:text-gray-900 mb-4">Paso 1: Define las clases base y de variantes en tu archivo CSS
-		Crea un archivo CSS principal (por ejemplo, styles.css) y añade las siguientes reglas dentro de la capa @layer components. Esto asegura que tus estilos personalizados tengan la especificidad correcta y no anulen las utilidades por defecto.</p>		
+<div class="border w-3/4 p-0">
+	<div class="w-full border mt-5 mb-10 p-lg-6 p-md-6">
+		<h1 class="underline font-mono text-lg text-gray-600 dark:text-pink-600">EJERCICIO 01</h1>
+		<h2 class="text-3xl text-dark-600 dark:text-green-400 mt-7">Creación de un botón reutilizable usando @apply.</h2>
+		<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">El enfoque más sencillo para crear un componente reutilizable en Tailwind es utilizando la directiva @apply en tu archivo CSS. Esto es ideal para proyectos sin frameworks de componentes o para elementos que se repiten con frecuencia (como botones, tarjetas o inputs)</p>
 	</div>
+	<div class="w-full mt-5 mb-10 p-lg-6 p-md-6">
+		<div class="mt-10 px-6 bg-red-900 dark:bg-yellow-300 rounded">
+			<p class="pathway-extreme-p text-lg text-white dark:text-gray-900 mb-4">Paso 1: Define las clases base y de variantes en tu archivo CSS
+			Crea un archivo CSS principal (por ejemplo, styles.css) y añade las siguientes reglas dentro de la capa @layer components. Esto asegura que tus estilos personalizados tengan la especificidad correcta y no anulen las utilidades por defecto.</p>		
+		</div>
+		<div class="mt-10">
+			<pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
+			  <code class="language-javascript">
+			    @import "tailwindcss";
 
-	<div class="mt-10">
-		<pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
-		  <code class="language-javascript">
-		    @import "tailwindcss";
+			    @custom-variant dark (&:where(.dark, .dark *));
+			      
+			    @theme{
+			      --font-sans: 'Inter', sans-serif;
+			    }
 
-		    @custom-variant dark (&:where(.dark, .dark *));
-		      
-		    @theme{
-		      --font-sans: 'Inter', sans-serif;
-		    }
+			    @layer components {
+			      /* Clase base para todos los botones */
+			      .btn {
+			        @apply py-2 px-4 rounded transition-colors duration-200;
+			      }
 
-		    @layer components {
-		      /* Clase base para todos los botones */
-		      .btn {
-		        @apply py-2 px-4 rounded transition-colors duration-200;
-		      }
+			      /* Variantes de color */
+			      .btn-primary {
+			        @apply bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+			      }
 
-		      /* Variantes de color */
-		      .btn-primary {
-		        @apply bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
-		      }
-
-		      .btn-secondary {
-		        @apply bg-gray-300 text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300;
-		      }
-		    }
-		  </code>
-		</pre>	
+			      .btn-secondary {
+			        @apply bg-gray-300 text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300;
+			      }
+			    }
+			  </code>
+			</pre>	
+		</div>
+		<div class="mt-10 px-6 bg-red-900 dark:bg-yellow-300 rounded">
+			<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Paso 2: Utiliza el componente en tu HTML
+			Ahora puedes usar estas clases de forma más limpia en tu HTML, sin necesidad de repetir las múltiples utilidades de Tailwind cada vez que necesites un botón.</p>	
+		</div>
+		<div class="mt-10">
+			<pre class="rounded">
+			  <code class="language-html">
+					&lt;!DOCTYPE html&gt;
+					&lt;html lang="es"&gt;
+					&lt;head&gt;
+					  &lt;link rel="stylesheet" href="./styles.css"&gt;
+					&lt;/head&gt;
+					&lt;body&gt;
+					  &lt;button class="btn btn-primary"&gt;Botón Primario&lt;/button&gt;
+					  &lt;button class="btn btn-secondary"&gt;Botón Secundario&lt;/button&gt;
+					  &lt;button class="btn btn-primary hover:scale-105"&gt;Botón con utilidades extra&lt;/button&gt;
+					&lt;/body&gt;
+					&lt;/html&gt;
+			  </code>
+			</pre>	
+		</div>
+		<div class="mt-10">
+			<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En este ejemplo, el último botón muestra una gran ventaja: puedes usar la clase base (btn) y la de variante (btn-primary), y luego añadir utilidades adicionales (hover:scale-105) para personalizar un caso específico sin romper la coherencia del componente base.</p>		
+		</div>
 	</div>
-
-	<div class="mt-10 px-6 bg-red-900 dark:bg-yellow-300 rounded">
-		<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Paso 2: Utiliza el componente en tu HTML
-		Ahora puedes usar estas clases de forma más limpia en tu HTML, sin necesidad de repetir las múltiples utilidades de Tailwind cada vez que necesites un botón.</p>	
-	</div>
-
-	<div class="mt-10">
-		<pre class="rounded">
-		  <code class="language-html">
-				&lt;!DOCTYPE html&gt;
-				&lt;html lang="es"&gt;
-				&lt;head&gt;
-				  &lt;link rel="stylesheet" href="./styles.css"&gt;
-				&lt;/head&gt;
-				&lt;body&gt;
-				  &lt;button class="btn btn-primary"&gt;Botón Primario&lt;/button&gt;
-				  &lt;button class="btn btn-secondary"&gt;Botón Secundario&lt;/button&gt;
-				  &lt;button class="btn btn-primary hover:scale-105"&gt;Botón con utilidades extra&lt;/button&gt;
-				&lt;/body&gt;
-				&lt;/html&gt;
-		  </code>
-		</pre>	
-	</div>
-
-	<div class="mt-10">
-	<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En este ejemplo, el último botón muestra una gran ventaja: puedes usar la clase base (btn) y la de variante (btn-primary), y luego añadir utilidades adicionales (hover:scale-105) para personalizar un caso específico sin romper la coherencia del componente base.</p>		
-	</div>
+	
 </div>

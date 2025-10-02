@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // Está oculto → mostrarlo
             sidebar.classList.remove('-translate-x-full');
             svg.classList.remove('rotate-180');
-            contentWrapper.classList.add('ml-64');
+            contentWrapper.classList.add('ml-60');
             localStorage.setItem('sidebarHidden', 'false');
         } else {
             // Está visible → ocultarlo
             sidebar.classList.add('-translate-x-full');
             svg.classList.add('rotate-180');
-            contentWrapper.classList.remove('ml-64');
+            contentWrapper.classList.remove('ml-60');
             localStorage.setItem('sidebarHidden', 'true');
         }
     });
@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             });
-            /*Funcionalidad del modal*/
+
+            /*Funcionalidad del modal "Buscar Tema con IA"*/
             const abrirModalBtn = document.getElementById('abrirModal');
             const cerrarModalBtn = document.getElementById('cerrarModal');
             const modalContainer = document.getElementById('modalContainer');
@@ -124,10 +125,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.text())
         .then(html => {
-            nivelContenido.innerHTML = html;            
-            //Obtener capitulos
-            obtenerCapitulo();
-             const listaCapitulos = document.getElementById('lista-capitulos');
+            //Obtener Lista de Capitulos del Nivel Seleccionado
+            nivelContenido.innerHTML = html;
+
+            //MANEJO DE LA LISTA DE CAPITULOS
+            
+            //Obtenero elementos para la carga dinamica
+            const listaCapitulos = document.getElementById('lista-capitulos');
             const toggleButton = document.getElementById('toggleCapitulos');            
             const linksCapitulos = document.querySelectorAll('#lista-capitulos a');
             const iconMenu = document.getElementById('icon-menu');
@@ -171,20 +175,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (listaVisible) {
                         toggleVisibility();
                     }
-
-                    // Agrega el evento al botón de "Volver a la lista"
-                    document.getElementById('volverLista').addEventListener('click', () => {
-                        // Anima la salida del contenido del capítulo
-                        const contentDiv = document.querySelector('#content-capitulo > div');
-                        contentDiv.classList.remove('opacity-100', 'scale-100');
-                        contentDiv.classList.add('opacity-0', 'scale-95');
-                        setTimeout(() => {
-                            contentCapitulo.innerHTML = '';
-                            toggleVisibility(); // Muestra la lista con animación
-                        }, 300);
-                    });
                 });
             });
+
+            obtenerCapitulo();
         })
         .catch(error => {
             console.error('Error al cargar el nivel:', error);
@@ -214,13 +208,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     body: JSON.stringify({ curso: curso, nivel: nivel, capitulo: cap })
                 })
                 .then(response => response.text())
-                .then(html => {                    
+                .then(html => {
+                    htmlCapitulo.innerHTML = `
+                        <div class="flex items-center justify-center py-10">
+                            <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
+                            <span class="ml-3">Cargando capitulo...</span>
+                        </div>
+                    `;
                     htmlCapitulo.innerHTML = html;
                     // ✅ Inicializar Prism.js después de inyectar HTML
                     if (typeof Prism !== 'undefined') {
                         Prism.highlightAll();
-                    }
-                    
+                    }                    
                 })
                 .catch(error => {
                     htmlContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el capítulo.</div>`;
