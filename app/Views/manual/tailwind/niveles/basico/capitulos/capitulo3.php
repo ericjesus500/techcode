@@ -1,6 +1,6 @@
 <!-- Capitulo 03: Directivas: @apply y @layer -->
 <hr>
-<article id="cap03" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+<article id="cap03" class="w-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
   <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 3: Directivas de Tailwind</h3>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Tailwind 4.0 representa un cambio significativo con un motor de alto rendimiento reescrito en Rust y una configuración basada en CSS, dejando atrás las directivas heredadas de la versión 3. Ahora, se integran de forma nativa muchas funcionalidades que antes requerían plugins de PostCSS, simplificando la cadena de herramientas.</p>
 

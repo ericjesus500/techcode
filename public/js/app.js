@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })
         .catch(error => {
-            manualContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el manual.</div>`;
+            manualContenido.innerHTML = `<div class="p-6 text-red-600">❌ Error al cargar el contenido del manual.</div>`;
         });
     });
 

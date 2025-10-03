@@ -1,6 +1,6 @@
 <!-- Capitulo 04:  -->
 <hr>
-<article id="cap04" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+<article id="cap04" class="w-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
   <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 4: </h3>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">.</p>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4"></p>

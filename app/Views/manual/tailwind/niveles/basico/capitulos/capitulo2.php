@@ -1,6 +1,6 @@
 <!-- Capitulo 02: Clases de Utilidades y Componentes -->
 <hr>
-<article id="cap02" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow md:box-border lg:box-border">
+<article id="cap02" class="w-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
   <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 2: Clases de Utilidades y Componentes</h3>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En Tailwind 4, las utilidades son clases de bajo nivel que aplican una única propiedad CSS, mientras que los componentes son abstracciones de estilos reutilizables que agrupan múltiples utilidades.</p>
   <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">La principal diferencia radica en su granularidad: las utilidades se aplican directamente en el HTML para un control preciso, mientras que los componentes son clases personalizadas que encapsulan patrones de diseño comunes.</p>
