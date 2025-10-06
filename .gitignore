@@ -5,4 +5,4 @@ vendor/
 *.log
 .DS_Store
 src/
-public/img/git/
+public/img/
