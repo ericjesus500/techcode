@@ -7,8 +7,7 @@
     <!-- PRISM -->
     <link rel="stylesheet" href="/css/prism.css" />
     <!-- TAILWIND -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="/css/style.css" />    
     <script>
     // Evita que el scroll se restaure antes de que el layout esté listo
     if ('scrollRestoration' in history) {

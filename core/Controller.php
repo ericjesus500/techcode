@@ -6,6 +6,6 @@ abstract class Controller {
 
     public function view($file, $data = []) {
         extract($data);
-        require_once __DIR__ . '/../../app/Views/' . $file;
+        require_once '../app/Views/' . $file . ".php";
     }
 }

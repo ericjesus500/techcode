@@ -1,0 +1,17 @@
+@layer components {
+
+  /* Clase base para contenedor de listas */
+  .contenedor-listas {
+    @apply rounded-xl mt-10 mb-10 p-10 bg-white dark:bg-gray-950 text-sm/7 text-gray-700 dark:text-gray-300;
+  }
+
+  /* Variantes de background */
+  .card-bg {
+    @apply bg-white dark:bg-gray-950;
+  }
+
+  /* Variantes de texto */
+  .card-bg__text {
+    @apply text-sm/7 text-gray-700 dark:text-gray-300;
+  }
+}
