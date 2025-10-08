@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data.push(curso);
                 data.push(nivel);
                 data.push(cap);
-                //console.log(data);                
+                //console.log(data);
                 fetch(`/capitulo/verCapitulo/${data}`, {
                     method: 'POST',
                     headers: {
