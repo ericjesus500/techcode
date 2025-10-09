@@ -34,10 +34,13 @@ class ProjectController extends Controller
   }
   public function verProject($tecnologia, $id)
   {
-    ob_clean(); // Limpiar cualquier salida previa
+    // Limpia cualquier salida previa
+    if (ob_get_level()) {
+      ob_clean();
+    }
 
     // Validar tecnología
-    $tecPermitidas = ['html_css', 'js', 'php'];    
+    $tecPermitidas = ['html_css', 'js', 'php', 'git', 'laravel', 'tailwind', 'typescript'];
 
     if (!in_array($tecnologia, $tecPermitidas)) {
       $this->renderError('Tecnología no válida.', 404);
