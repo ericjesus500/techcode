@@ -1,6 +1,7 @@
 <!-- Capítulo 1: El Poder de Tailwind -->
-  <hr>
-  <article id="cap01" class="w-full bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
+<hr>
+<div class="flex md:flex-row">
+  <article id="cap01" class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
     <h3 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 1: El Poder de Tailwind</h3>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">En este capítulo conoceremos todo lo que es posible realizar con Tailwind.</p>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Para un aprendizaje óptimo de Tailwind CSS desde cero, los fundamentos más relevantes e importantes se centran en cambiar el enfoque tradicional del CSS y comprender cómo funciona su metodología de "primero utilidades".</p>
@@ -99,8 +100,8 @@
           </li>
         </ul>
       </div>
-    </div>        
-        
+    </div>
+
     <h4 class="mt-12 text-xl font-mono text-gray-300 dark:text-yellow-400">1.5 Directivas de Tailwind</h4>
     <div class="rounded-xl bg-white mt-10 mb-10 p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
       <div class="space-y-6">
@@ -132,7 +133,7 @@
         </ul>
       </div>
     </div>
-        
+
     <h4 class="mt-12 text-xl font-mono text-gray-300 dark:text-yellow-400">1.6 Creación de componentes reutilizables</h4>
     <div class="rounded-xl bg-white mt-10 mb-10 p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
       <div class="space-y-6">
@@ -154,7 +155,7 @@
               <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
             </svg>
             <p class="ml-3 text-base">
-              <span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500">Integración con frameworks</span>: Para proyectos más complejos y modernos, la mejor práctica es crear componentes con frameworks como React, Vue o Angular. Esto te permite encapsular la lógica y el estilo, haciendo que tu interfaz de usuario sea modular y fácil de mantener.                  
+              <span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500">Integración con frameworks</span>: Para proyectos más complejos y modernos, la mejor práctica es crear componentes con frameworks como React, Vue o Angular. Esto te permite encapsular la lógica y el estilo, haciendo que tu interfaz de usuario sea modular y fácil de mantener.
             </p>
           </li>
           <li class="flex">
@@ -166,12 +167,12 @@
             <p class="ml-3 text-base">
               <span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500">Aprovechar @layer</span>: Utiliza esta directiva para organizar tus componentes de manera lógica dentro de tu hoja de estilos principal, controlando la especificidad y el orden de inyección de las utilidades.
             </p>
-          </li>              
+          </li>
         </ul>
       </div>
-    </div>           
+    </div>
 
-    <h4 class="mt-12 text-xl font-mono text-gray-300 dark:text-yellow-400">1.7 Personalización avanzada de la configuración</h4>    
+    <h4 class="mt-12 text-xl font-mono text-gray-300 dark:text-yellow-400">1.7 Personalización avanzada de la configuración</h4>
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">El archivo tailwind.config.js es el corazón de la personalización de Tailwind. Aquí puedes llevar tu diseño al siguiente nivel extendiendo y anulando la configuración por defecto para adaptarla a la identidad de tu proyecto</p>
     <div class="rounded-xl bg-white mt-10 mb-10 p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
       <div class="space-y-6">
@@ -228,7 +229,7 @@
         </ul>
       </div>
     </div>
-       
+
     <h4 class="mt-10 text-xl font-mono text-gray-300 dark:text-yellow-400">1.9 Recomendaciones</h4>
     <div class="rounded-xl bg-white mt-10 mb-10 p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
       <div class="space-y-6">
@@ -259,15 +260,23 @@
           </li>
         </ul>
       </div>
-    </div>        
+    </div>
 
     <!-- Ejercicios -->
     <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
       <h4 class="text-xl font-mono font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
       <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li><a href="./ejercicios/basicos/tailwind/1" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/2" target="_blank">Componente de tarjeta en un framework (React)</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/3" target="_blank">Cómo añadir tipografías personalizadas</a></li>          
+        <li><a href="/ejercicios/basicos/tailwind/1" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
+        <li><a href="/ejercicios/basicos/tailwind/2" target="_blank">Componente de tarjeta en un framework (React)</a></li>
+        <li><a href="/ejercicios/basicos/tailwind/3" target="_blank">Cómo añadir tipografías personalizadas</a></li>
       </ol>
     </div>
   </article>
+
+  <div id="subtitulos " class="w-1/4 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
+    <div class="mt-3 h-8 dark:bg-pink-100">
+      <h2 class="text-xl font-mono text-center">Sub Capitulos</h2>
+    </div>
+    <div class="content-subtitulos dark:bg-blue-400 h-auto mt-6 relative">hola</div>
+  </div>
+</div>

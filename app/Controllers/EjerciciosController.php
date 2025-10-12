@@ -29,7 +29,7 @@
           echo "<h1 class='text-red-600'>❌ Ejercicio no encontrado</h1>";
           return;
         }
-        require_once $rutaEjercicio;
+        require_once '../app/views/layout/layoutEjercicios.php';
 		}
 	}
 ?>

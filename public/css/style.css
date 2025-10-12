@@ -9,14 +9,14 @@
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-900: oklch(39.6% 0.141 25.723);
-    --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-500: oklch(76.9% 0.188 70.08);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-yellow-50: oklch(98.7% 0.026 102.212);
+    --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
+    --color-yellow-900: oklch(42.1% 0.095 57.708);
     --color-green-50: oklch(98.2% 0.018 155.826);
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-400: oklch(79.2% 0.209 151.711);
@@ -83,6 +83,7 @@
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-spin: spin 1s linear infinite;
     --animate-bounce: bounce 1s infinite;
@@ -289,6 +290,9 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
@@ -312,9 +316,6 @@
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-7 {
-    margin-top: calc(var(--spacing) * 7);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
@@ -435,9 +436,6 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
-  }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -578,6 +576,9 @@
       margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
+  }
+  .gap-x-2 {
+    column-gap: calc(var(--spacing) * 2);
   }
   .gap-x-3 {
     column-gap: calc(var(--spacing) * 3);
@@ -733,17 +734,11 @@
   .bg-yellow-600 {
     background-color: var(--color-yellow-600);
   }
-  .fill-amber-100 {
-    fill: var(--color-amber-100);
-  }
   .fill-amber-500 {
     fill: var(--color-amber-500);
   }
-  .fill-amber-600 {
-    fill: var(--color-amber-600);
-  }
-  .fill-current {
-    fill: currentcolor;
+  .fill-blue-400 {
+    fill: var(--color-blue-400);
   }
   .fill-sky-400\/25 {
     fill: color-mix(in srgb, oklch(74.6% 0.16 232.661) 25%, transparent);
@@ -753,6 +748,9 @@
   }
   .fill-teal-500 {
     fill: var(--color-teal-500);
+  }
+  .fill-yellow-600 {
+    fill: var(--color-yellow-600);
   }
   .stroke-sky-400\/25 {
     stroke: color-mix(in srgb, oklch(74.6% 0.16 232.661) 25%, transparent);
@@ -766,11 +764,11 @@
   .object-contain {
     object-fit: contain;
   }
-  .p-0 {
-    padding: calc(var(--spacing) * 0);
-  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -924,9 +922,6 @@
   .text-red-600 {
     color: var(--color-red-600);
   }
-  .text-teal-500 {
-    color: var(--color-teal-500);
-  }
   .text-white {
     color: var(--color-white);
   }
@@ -991,9 +986,16 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .delay-150 {
+    transition-delay: 150ms;
+  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .ease-in {
+    --tw-ease: var(--ease-in);
+    transition-timing-function: var(--ease-in);
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
@@ -1101,10 +1103,10 @@
       }
     }
   }
-  .hover\:text-teal-500 {
+  .hover\:text-gray-800 {
     &:hover {
       @media (hover: hover) {
-        color: var(--color-teal-500);
+        color: var(--color-gray-800);
       }
     }
   }
@@ -1293,6 +1295,11 @@
       background-color: var(--color-yellow-50);
     }
   }
+  .dark\:bg-yellow-200 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-yellow-200);
+    }
+  }
   .dark\:bg-yellow-300 {
     &:where(.dark, .dark *) {
       background-color: var(--color-yellow-300);
@@ -1341,6 +1348,11 @@
   .dark\:text-gray-400 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-400);
+    }
+  }
+  .dark\:text-gray-500 {
+    &:where(.dark, .dark *) {
+      color: var(--color-gray-500);
     }
   }
   .dark\:text-gray-700 {
