@@ -393,7 +393,7 @@
                 <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
                 <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
               </svg>
-              <p class="ml-3 text-base"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500"></span>:</p>
+              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500"></span>:</p>
             </li>
             <li class="flex">
               <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
@@ -401,7 +401,7 @@
                 <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
                 <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
               </svg>
-              <p class="ml-3 text-base"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500"></span>: .</p>
+              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500"></span>: .</p>
             </li>
             <li class="flex">
               <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
@@ -409,7 +409,7 @@
                 <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
                 <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
               </svg>
-              <p class="ml-3 text-base"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500"></span>: .</p>
+              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-500"></span>: .</p>
             </li>
           </ul>
         </div>

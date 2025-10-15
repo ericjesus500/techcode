@@ -10,6 +10,7 @@ $isAjax = (
 );
 
 $url = $_GET['url'] ?? '';
+/*echo $url;*/
 
 if ($isAjax) {
     $router = new Router($url);
@@ -29,6 +30,7 @@ include '../app/Views/layout/header.php';
                     if ($url) {
                         $router = new Router($url);
                         $router->dispatch();
+                        /*echo $url;*/
                     } else {
                         // Página de inicio
                         include '../app/Views/home/content.php';

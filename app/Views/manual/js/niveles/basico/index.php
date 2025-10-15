@@ -1,32 +1,27 @@
-<div class="space-y-8">
-    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">📚 Nivel Básico - JAVASCRIPT</h2>
-    
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-      <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Capítulo 1: Sintaxis Básica</h3>
-      <p class="text-gray-600 dark:text-gray-300 mb-4">Aprende los fundamentos de JAVASCRIPT.</p>
-			<pre class="bg-gray-100 dark:bg-gray-900 p-4 rounded">
-       	<code class="language-javascript">
-		      let array = [];
-		      let numeros = [1, 2, 3, 4, 5];
-		      const meses = new Array('
-		      	Enero',
-		      	'Febrero',
-		      	'Marzo'
-		      );
-		    </code>
-		  </pre>
-    </div>
+<section class="space-y-8 max-w-full min-w-0">
+  <div class="flex items-center justify-between">
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">📜 Capítulos</h2>
+    <button id="toggleCapitulos" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      <!-- Ícono de menú (visible por defecto) -->
+      <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Ícono de cierre (oculto por defecto) -->
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
 
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-        <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Capítulo 2: Variables y Tipos</h3>
-        <p class="text-gray-600 dark:text-gray-300">Descubre cómo declarar y usar variables.</p>
-    </div>
+  <div id="lista-capitulos" class="mx-auto p-3 rounded border border-gray-600 bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300
+      transition-all duration-300 ease-in-out">
+    <ul class="capitulos flex flex-col">
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="1">Capitulo 1: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="2">Capitulo 2: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="3">Capitulo 3: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="4">Capitulo 4: </a></li>
+    </ul>
+  </div>
 
-    <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-        <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li><a href="./ejercicios/basico/ejercicio01.php" target="_blank">Crea un script que imprima tu nombre.</a></li>
-            <li>Declara 3 variables con diferentes tipos de datos.</li>
-        </ol>
-    </div>
-</div>
+  <div id="content-capitulo" class="box-border"></div>
+</section>

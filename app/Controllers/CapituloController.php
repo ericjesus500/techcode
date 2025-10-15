@@ -28,7 +28,7 @@
 			// Verificar que $url exista
       if (!file_exists($url)) {
           http_response_code(404);
-          echo "<div class='p-6 text-red-600'>❌ CApitulo '{$capitulo}' no encontrado.</div>";
+          echo "<div class='p-6 text-red-600'>❌ Capitulo '{$capitulo}' no encontrado.</div>";
           return;
       }
 

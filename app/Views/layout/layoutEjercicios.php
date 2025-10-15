@@ -1,8 +1,8 @@
 <div class="py-4">
   <div class="header-ejercicios text-center mb-10 ">
-    <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">👋 ¡Bienvenido a la página de Ejercicios de Tailwind</h1>
+    <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">👋 ¡Bienvenido a la página de Ejercicios de <?= $tecno; ?></h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-      Aqui encontrarás diversos ejercicios prácticos que me ayudaron a comprender, entender y aprender a utilizar todo el ecosistema de Tailwind.
+      Aqui encontrarás diversos ejercicios prácticos que me ayudaron a comprender, entender y aprender a utilizar todo el ecosistema de <?= $tecno; ?>.
     </p>
   </div>
   <div class="body-ejercicios flex md:flex-row">

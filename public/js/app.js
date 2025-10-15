@@ -6,7 +6,28 @@ document.addEventListener('DOMContentLoaded', function () {
   //boton que oculta y muestra el sidebar
   const toggleBtn = document.getElementById('toggle-sidebar');
   const sidebar = document.querySelector('aside');
-  const sideItem = document.querySelectorAll('#sidenav ul li a');
+
+  //Elementos para obtener la URL
+  const sidebarItems = document.querySelectorAll('.sidebar-link');
+  const currentPath = window.location.pathname;
+
+  sidebarItems.forEach(item => {
+    const link = item.querySelector('a'); // ← Selecciona el <a> dentro del <li>
+    if (!link) return;
+
+    const linkHref = new URL(link.href, window.location.href).pathname;
+
+    if (
+      currentPath === linkHref ||
+      (currentPath === '/' && linkHref === '/') ||
+      (currentPath.startsWith(linkHref) && linkHref !== '/')
+    ) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+
 
   // Estado inicial desde localStorage
   const isSidebarHidden = localStorage.getItem('sidebarHidden') === 'false';
@@ -232,6 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
         data = [];
       })
     })
-  } 
+  }  
 });
 

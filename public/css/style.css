@@ -16,7 +16,6 @@
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
-    --color-yellow-900: oklch(42.1% 0.095 57.708);
     --color-green-50: oklch(98.2% 0.018 155.826);
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-400: oklch(79.2% 0.209 151.711);
@@ -358,6 +357,9 @@
   }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
   }
   .ml-60 {
     margin-left: calc(var(--spacing) * 60);
@@ -704,9 +706,6 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
@@ -749,9 +748,6 @@
   .fill-teal-500 {
     fill: var(--color-teal-500);
   }
-  .fill-yellow-600 {
-    fill: var(--color-yellow-600);
-  }
   .stroke-sky-400\/25 {
     stroke: color-mix(in srgb, oklch(74.6% 0.16 232.661) 25%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -781,6 +777,9 @@
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -1553,6 +1552,19 @@
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth"100;
+}
+.sidebar-link.active {
+  border-radius: 0.25rem;
+  background-color: var(--color-blue-100);
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-blue-800);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-blue-900);
+  }
+  &:where(.dark, .dark *) {
+    color: var(--color-blue-400);
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
