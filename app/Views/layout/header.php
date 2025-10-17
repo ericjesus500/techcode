@@ -7,7 +7,7 @@
     <!-- PRISM -->
     <link rel="stylesheet" href="/css/prism.css" />
     <!-- TAILWIND -->
-    <link rel="stylesheet" href="/css/style.css" />    
+    <link rel="stylesheet" href="/css/style.css" />
     <script>
     // Evita que el scroll se restaure antes de que el layout esté listo
     if ('scrollRestoration' in history) {
@@ -20,7 +20,7 @@
       <div class="flex">
         <!-- Zona 1: Ancho fijo (igual al sidebar) -->
         <div class="w-64 flex items-center justify-center py-3 bg-gray-900 dark:bg-gray-900">
-          <span class="text-xl font-bold text-blue-400">TechCode</span>
+          <a href="/" class="text-xl font-bold text-blue-400">TechCode</a>
         </div>
 
         <!-- Zona 2: Ancho dinámico (igual al contenido) -->
