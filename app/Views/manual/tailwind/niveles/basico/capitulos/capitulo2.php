@@ -1,237 +1,229 @@
-<!-- Capitulo 02: Clases de Utilidades y Componentes -->
+<!-- Capitulo 02: BreakPoints -->
 <hr>
 <div class="container mx-auto my-8">
   <div class="flex md:flex-row">
-    <article id="cap02" class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
-      <h1 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 2: Clases de Utilidades y Componentes</h1>
-      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">En Tailwind 4, las utilidades son clases de bajo nivel que aplican una única propiedad CSS, mientras que los componentes son abstracciones de estilos reutilizables que agrupan múltiples utilidades.</p>
-      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">La principal diferencia radica en su granularidad: las utilidades se aplican directamente en el HTML para un control preciso, mientras que los componentes son clases personalizadas que encapsulan patrones de diseño comunes.</p>
+    <article id="cap2" class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
+      <h1 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo <?= $capitulo; ?>: BreakPoints</h1>
+      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">En este capítulo, exploraremos los breakpoints en Tailwind CSS versión 4, una herramienta esencial para crear diseños responsivos y adaptativos. Los breakpoints permiten aplicar estilos específicos según el tamaño de la pantalla del dispositivo, asegurando que tu sitio web se vea y funcione bien en una variedad de dispositivos, desde teléfonos móviles hasta monitores de escritorio grandes.</p>
 
-      <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Utilidades</h2>
-      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Las utilidades son la base de Tailwind, su enfoque "utility-first". Son atajos para propiedades CSS comunes que permiten construir interfaces directamente en el marcado HTML. En la versión 4, su uso se ha simplificado y optimizado.</p>
+      <!-- BreakPoints de tailwind 4-->
+      <section>
+        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">BreakPoints de tailwind 4</h2>
+        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">Tailwind 4, al igual que sus versiones anteriores, utiliza un enfoque de diseño mobile-first, lo que significa que los estilos que no tienen un prefijo de breakpoint se aplican a todas las pantallas, y los prefijos se usan para sobrescribir esos estilos en pantallas más grandes.</p>
+        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">La versión 4 incluye como novedad la compatibilidad con Container Queries de forma nativa, permitiendo un diseño responsivo basado en el tamaño del contenedor y no solo en el ancho del viewport.</p>
+        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">Tailwind 4 ofrece los mismos prefijos de breakpoint que las versiones anteriores, que se corresponden con los siguientes anchos de pantalla:</p>
 
-      <p class="pathway-extreme-p text-xl underline my-10 text-white">Características:</p>
-      <div class="contenedor-listas">
-        <ul class="space-y-3">
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Granularidad</span>: Cada clase realiza una acción específica (ej: flex, p-4, text-center).</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Componibilidad</span>: Al ser pequeñas, puedes combinarlas para crear diseños complejos.</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Variantes</span>: Admiten prefijos para aplicar estilos en diferentes estados (hover:, focus:) y en puntos de interrupción (md:, lg:).</p>
-          </li>
-        </ul>
-      </div>
+        <div class="overflow-x-aut mt-6">
+          <table class="table-auto border-separate font-mono">
+            <thead>
+              <tr>
+                <th>Breakpoint</th>
+                <th>Prefijo</th>
+                <th>Ancho mínimo</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-sm">
+                <td>sm</td>
+                <td><code>sm:</code></td>
+                <td>640px y superior.</td>
+                <td>Pequeñas pantallas (teléfonos grandes)</td>
+              </tr>
+              <tr class="text-sm">
+                <td>md</td>
+                <td><code>md:</code></td>
+                <td>768px y superior</td>
+                <td>Pantallas medianas (tabletas)</td>
+              </tr>
+              <tr class="text-sm">
+                <td>lg</td>
+                <td><code>lg:</code></td>
+                <td>1024px y superior</td>
+                <td>Pantallas grandes (laptops)</td>
+              </tr>
+              <tr class="text-sm">
+                <td>xl</td>
+                <td><code>xl:</code></td>
+                <td>1280px y superior</td>
+                <td>Pantallas extra grandes (monitores de escritorio)</td>
+              </tr>
+              <tr class="text-sm">
+                <td>2xl</td>
+                <td><code>2xl:</code></td>
+                <td>1536px y superior</td>
+                <td>Pantallas ultra grandes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <p class="pathway-extreme-p text-xl underline my-10 text-white">Cómo se usan:</p>
-      <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
-        <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Para crear una tarjeta simple, se aplican las utilidades directamente a un elemento HTML:</p>
-      </div>
-      <div class="mt-10">
-        <pre>
-          <code class="language-html">
-            &lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;
-              &lt;h2 class="text-xl font-bold"&gt;Tarjeta de utilidades&lt;/h2&gt;
-              &lt;p class="text-gray-600 mt-2"&gt;
-                Este es un ejemplo que usa clases de utilidad para el diseño.
-              &lt;/p&gt;
-            &lt;/div&gt;
-          </code>
-        </pre>
-      </div>
+        <p class="pathway-extreme-p text-xl underline my-10 text-white">Cómo se usan:</p>
+        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">Para aplicar una clase a partir de un breakpoint, simplemente se antepone el prefijo al nombre de la clase, seguido de dos puntos (:).</p>
+        <div class="mt-10">
+          <pre>
+            <code class="language-html">
+              &lt;div class="bg-blue-500 sm:bg-green-500 md:bg-yellow-500 lg:bg-red-500 xl:bg-purple-500 2xl:bg-pink-500 p-4 text-white"&gt;
+                Este div cambia de color según el tamaño de la pantalla.
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-10">Para cambiar la cantidad de columnas de una cuadrícula según el tamaño de la pantalla, puedes usar los prefijos de la siguiente manera:</p>
+        <div class="mt-10">
+          <pre>
+            <code class="language-html">
+              &lt;div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"&gt;
+                &lt;div class="bg-gray-200 p-4"&gt;Elemento 1&lt;/div&gt;
+                &lt;div class="bg-gray-200 p-4"&gt;Elemento 2&lt;/div&gt;
+                &lt;div class="bg-gray-200 p-4"&gt;Elemento 3&lt;/div&gt;
+                &lt;div class="bg-gray-200 p-4"&gt;Elemento 4&lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
 
-      <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Componentes</h2>
-      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Aunque Tailwind es "utility-first", permite crear componentes personalizados para encapsular patrones de diseño repetitivos. En Tailwind 4, se usan las capas nativas de CSS y la directiva @layer components (o la nueva @utility) para definir estas clases personalizadas.</p>
+        <p class="pathway-extreme-p text-xl underline my-10 text-white">Explicación:</p>
+        <div class="contenedor-listas">
+          <ul class="space-y-3">
+            <li class="flex">
+              <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+                <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+                <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+                <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+              </svg>
+              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Colores de fondo</span>: El div cambia su color de fondo según el tamaño de la pantalla, comenzando con azul en pantallas pequeñas y pasando por verde, amarillo, rojo, púrpura y rosa en pantallas más grandes.</p>
+            </li>
+            <li class="flex">
+              <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+                <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+                <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+                <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+              </svg>
+              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Columnas de cuadrícula</span>: La cuadrícula comienza con una sola columna en pantallas pequeñas (grid-cols-1) y aumenta el número de columnas a medida que la pantalla se hace más grande, en pantallas medianas (md) la cuadrícula cambia a tres columnas (md:grid-cols-3) y en pantallas extra grandes (lg) y superiores llega a cuatro columnas (lg:grid-cols-4).</p>
+            </li>
+          </ul>
+        </div>
 
-      <p class="pathway-extreme-p text-xl underline my-10 text-white">Características:</p>
-      <div class="contenedor-listas">
-        <ul class="space-y-3">
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Abstracción</span>: Se crean para encapsular un conjunto de estilos comunes y darle un nombre semántico</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Reutilización</span>: Una vez definidos, se pueden usar en múltiples lugares con una sola clase, manteniendo la coherencia.</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Sobrescritura</span>: Puedes sobreescribir estilos específicos de un componente usando utilidades en línea.</p>
-          </li>
-        </ul>
-      </div>
+        <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>¿Con qué otras clases se complementan?</h3>
+        <p class="ml-6 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Los breakpoints se complementan con cualquier clase de utilidad de Tailwind para construir interfaces adaptables. Algunas combinaciones comunes son:</p>
 
-      <p class="pathway-extreme-p text-xl underline my-10 text-white">Cómo se usan:</p>
-      <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
-        <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-800">1. Definición en CSS</span>: En tu archivo CSS de origen (Por ejemplo src/css/tailwind.css), defines el componente usando la directiva <span class="text-gray-600 dark:text-pink-900">@layer components</span>. En la v4, se puede usar <span class="text-gray-600 dark:text-pink-900">@utility</span> para mayor control, aunque <span class="text-gray-600 dark:text-pink-900">@layer components</span> sigue siendo válido para componentes complejos</p>
-      </div>
-      <div class="mt-10">
-        <pre>
-          <code class="language-css">
-            /* tailwind.css */
-            @import "tailwindcss";
+        <h4 class="ml-6 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Flexbox</h4>
+        <p class="ml-6 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Alineación y dirección</p>
 
-            @layer components {
-              .btn-primary {
-                @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+        <div class="contenedor-listas ml-6">
+          <ul class="space-y-3">
+            <li class="flex md:flex-row lg:flex-row">
+              <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+              <p class="ml-3 text-base pathway-extreme-p text-white">&lt;div class="flex flex-col md:flex-row items-center"&gt;
+              </p>
+            </li>
+            <li class="flex md:flex-row lg:flex-row">
+              <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+              <p class="ml-3 text-base pathway-extreme-p text-white">Este contenedor se muestra como una columna (flex-col) en móviles y como una fila (flex-row) en pantallas medianas y superiores.</p>
+            </li>
+          </ul>
+        </div>
+
+        <h4 class="ml-6 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Espaciado (Padding y Margin)</h4>
+        <p class="ml-6 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Espaciado responsivo</p>
+
+        <div class="contenedor-listas ml-6">
+          <ul class="space-y-3">
+            <li class="flex md:flex-row lg:flex-row">
+              <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+              <p class="ml-3 text-base pathway-extreme-p text-white">&lt;div class="p-4 sm:p-6 lg:p-8"&gt;</p>
+            </li>
+            <li class="flex md:flex-row lg:flex-row">
+              <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+              <p class="ml-3 text-base pathway-extreme-p text-white">El relleno del contenedor aumenta a medida que la pantalla se hace más grande.</p>
+            </li>
+          </ul>
+        </div>
+
+        <h4 class="ml-6 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Tipografía</h4>
+        <p class="ml-6 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Tamaño del texto</p>
+
+        <div class="contenedor-listas ml-6">
+          <ul class="space-y-3">
+            <li class="flex md:flex-row lg:flex-row">
+              <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+              <p class="ml-3 text-base pathway-extreme-p text-white">&lt;p class="text-sm md:text-base lg:text-xl"&gt;</p>
+            </li>
+            <li class="flex md:flex-row lg:flex-row">
+              <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+              <p class="ml-3 text-base pathway-extreme-p text-white">El tamaño del texto se ajusta según el tamaño de la pantalla.</p>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Personalización de los BreakPoints</h3>
+        <p class="ml-6 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Si los breakpoints por defecto no se ajustan a tus necesidades, puedes personalizarlos en el archivo tailwind.config.js.</p>
+
+        <div class="mt-10 ml-6">
+          <pre class="rounded overflow-x-auto">
+            <code class="language-javascript">
+              // tailwind.config.js
+              module.exports = {
+                theme: {
+                  screens: {
+                    'tablet': '640px',
+                    'laptop': '1024px',
+                    'desktop': '1280px',
+                  },
+                },
               }
-            }
-          </code>
-        </pre>
-      </div>
-
-      <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
-        <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-800">2. Aplicación en HTML</span>: Se usa la clase personalizada en el HTML.</p>
-      </div>
-
-      <div class="mt-10">
-        <pre>
-          <code class="language-html">
-            &lt;button class="btn-primary"&gt;
-              Botón primario
-            &lt;/button&gt;
-          </code>
-        </pre>
-      </div>
-
-      <h2 class="my-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Diferencias y cuándo usar cada uno</h2>
-
-      <div class="overflow-x-auto">
-        <table class="table-auto border-separate font-mono">
-          <thead>
-            <tr>
-              <th>Característica</th>
-              <th>Utilidades</th>
-              <th>Componentes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="text-sm">
-              <td>Nivel</td>
-              <td>Bajo nivel, granular</td>
-              <td>Alto nivel, abstracto</td>
-            </tr>
-            <tr class="text-sm">
-              <td>Encapsulación</td>
-              <td>No encapsulan lógica</td>
-              <td>Agrupan múltiples utilidades bajo una clase</td>
-            </tr>
-            <tr class="text-sm">
-              <td>Nombre</td>
-              <td>Descriptivo de la propiedad CSS (flex, p-4)</td>
-              <td>Semántico (.btn, .card).</td>
-            </tr>
-            <tr class="text-sm">
-              <td>Reusabilidad</td>
-              <td>Se combinan para crear bloques.</td>
-              <td>Se reutiliza una única clase para un bloque completo.</td>
-            </tr>
-            <tr class="text-sm">
-              <td>Mantenimiento</td>
-              <td>Puede generar HTML verboso.</td>
-              <td>Simplifica el marcado, ideal para patrones repetitivos.</td>
-            </tr>
-            <tr class="text-sm">
-              <td>Uso ideal</td>
-              <td>Para diseño rápido, prototipado y estilos únicos.</td>
-              <td>Para elementos que se repiten con el mismo aspecto (botones, tarjetas, etc.).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="pathway-extreme-p text-xl underline my-10 text-white">Cuándo usar utilidades vs. componentes:</p>
-      <div class="contenedor-listas">
-        <ul class="space-y-3">
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Usa utilidades</span>: cuando los estilos son únicos o no se van a reutilizar en muchos lugares. Es ideal para maquetación y diseño detallado.</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Usa componentes</span>: cuando tienes patrones de diseño que se repiten en tu proyecto (ej: botones, tarjetas, modales). Simplifica el código y facilita el mantenimiento a largo plazo.</p>
-          </li>
-        </ul>
-      </div>
+            </code>
+          </pre>
+        </div>
+        <p class="ml-6 mt-10 pathway-extreme-p text-xl text-gray-600 dark:text-white">Esto te permite usar prefijos personalizados como tablet:, laptop:, etc.</p>
+      </section>     
 
       <!-- Ejercicios -->
-      <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-        <h4 class="text-xl font-mono font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li><a href="./ejercicios/basicos/tailwind/4" target="_blank">Uso de clases de utilidad</a></li>
-          <li><a href="./ejercicios/basicos/tailwind/5" target="_blank">Uso de componentes</a></li>
-        </ol>
-      </div>
+      <section class="mt-8 p-6">
+        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+          <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
+          <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
+            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
+            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
+          </ol>
+        </div>
+      </section>
     </article>
 
-    <div id="subtitulos " class="w-1/4 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
+    <aside id="subtitulos " class="w-1/4 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
       <div class="mt-3 h-8 dark:bg-pink-100">
         <h2 class="text-xl font-mono text-center">Sub Capitulos</h2>
       </div>
       <div class="content-subtitulos dark:bg-blue-400 h-auto mt-6 relative">hola</div>
-    </div>
-  </div>  
+    </aside>
+  </div>
 </div>
 
 <!-- templates -->
 <div>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  
-  <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
-  <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
-  <p class="ml-3 mt-5 pathway-extreme-p text-xl dark:text-white">
 
-  <h4 class="mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
+  <!-- Subtitulos -->
+  <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">:</p>
+
+  <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
+
+  <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
+  <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
+
+  <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
+  <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
 
   <!-- Resaltado -->
   <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
     <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">lorem</p>
   </div>
-  <p class="pathway-extreme-p text-xl underline my-10 text-white">:</p>
-  <p class="pathway-extreme-p text-xl underline my-10 text-white">:</p>
-  <p class="pathway-extreme-p text-xl underline my-10 text-white">:</p>
 
-  <!-- contenedor Listas -->
+  <!-- contenedor Listas Importantes-->
   <div class="contenedor-listas">
     <ul class="space-y-3">
       <li class="flex">
@@ -261,10 +253,28 @@
     </ul>
   </div>
 
+  <!-- contenedor Listas-->
+  <div class="contenedor-listas">
+    <ul class="space-y-3">
+      <li class="flex md:flex-row lg:flex-row">
+        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">.</p>
+      </li>
+      <li class="flex md:flex-row lg:flex-row">
+        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">.</p>
+      </li>
+      <li class="flex md:flex-row lg:flex-row">
+        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">.</p>
+      </li>
+    </ul>
+  </div>
+
   <!-- pre -->
   <div class="mt-10">
-    <pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
-      <code class="language-javascript">        
+    <pre class="rounded overflow-x-auto">
+      <code class="language-javascript">
       </code>
     </pre>
   </div>
@@ -300,6 +310,6 @@
     <ul class="my-5">
       <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>.</li>
       <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>    
+    </ul>
   </div>
 </div>

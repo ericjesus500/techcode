@@ -17,9 +17,13 @@
       transition-all duration-300 ease-in-out">
     <ul class="capitulos flex flex-col">
       <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="1">Capitulo 1: El Poder de Tailwind</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="2">Capitulo 2: Clases de Utilidades y Componentes</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="3">Capitulo 3: Directivas de Tailwind</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="4">Capitulo 4</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="2">Capitulo 2: BreakPoints</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="3">Capitulo 3: Clases de Utilidades</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="4">Capitulo 4: Clases de utilidad para Layouts</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="5">Capitulo 5: Container Queries (novedad en Tailwind 4)</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="6">Capitulo 6: Componentes</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="7">Capitulo 7: Directivas de Tailwind: @apply & @layer</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="8">Capitulo 8</a></li>
     </ul>
   </div>
 

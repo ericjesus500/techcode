@@ -1,98 +1,219 @@
-<h1 class="underline font-mono text-lg text-gray-600 dark:text-pink-600">EJERCICIO 04</h1>
-<h2 class="my-12 text-3xl text-dark-600 dark:text-green-400">Uso de componentes</h2>
+<div class="container mx-auto mt-4">
+	<div class="w-full mb-10 lg:px-6 md:px-6">
+		<h1 class="underline font-mono text-lg text-blue-600 dark:text-pink-600">EJERCICIO <?= $id; ?></h1>
+		<h2 class="my-6 font-mono text-2xl text-gray-300 dark:text-yellow-400">Práctica:  Creación de un Modal</h2>
 
-<div class="flex gap-x-4">
-	<div class="flex-1 justify-center items-center">		
-		<pre class="bg-gray-300 dark:bg-gray-900 p-4 rounded">
-      <code class="language-html">
-      	&lt;div class="contenedor-listas"&gt;
-		      &lt;div class="space-y-6"&gt;
-		        &lt;ul class="space-y-3"&gt;
-		          &lt;li class="flex"&gt;
-		            &lt;svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square"&gt;
-		              &lt;circle cx="11" cy="11" r="11" class="fill-sky-400/25" /&gt;
-		              &lt;circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" /&gt;
-		              &lt;path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" /&gt;
-		            &lt;/svg&gt;
-		            &lt;p class="ml-3 text-base"&gt;Item 1: contenido&lt;/p&gt;
-		          &lt;/li&gt;
-		          &lt;li class="flex"&gt;
-		            &lt;svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square"&gt;
-		              &lt;circle cx="11" cy="11" r="11" class="fill-sky-400/25" /&gt;
-		              &lt;circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" /&gt;
-		              &lt;path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" /&gt;
-		            &lt;/svg&gt;
-		            &lt;p class="ml-3 text-base"&gt;Item 2: contenido.&lt;/p&gt;
-		          &lt;/li&gt;
-		          &lt;li class="flex"&gt;
-		            &lt;svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square"&gt;
-		              &lt;circle cx="11" cy="11" r="11" class="fill-sky-400/25" /&gt;
-		              &lt;circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" /&gt;
-		              &lt;path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" /&gt;
-		            &lt;/svg&gt;
-		            &lt;p class="ml-3 text-base"&gt;Item 3: contenido.&lt;/p&gt;
-		          &lt;/li&gt;
-		        &lt;/ul&gt;
-		      &lt;/div&gt;
-		    &lt;/div&gt;    
-      </code>
-    </pre>
-	</div>	
+		<!-- Modal -->
+		<div class="flex">
+			<div class="flex-1 md:flex-col">
+				<!-- Botón para abrir el modal -->
+				<button id="abrirModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+				  Abrir Modal
+				</button>
+				<!-- Estructura del Modal -->
+				<div id="modalContainer" class="hidden fixed inset-0 flex items-center justify-center z-50">
+				  <!-- Overlay (fondo semitransparente) -->
+				  <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+
+				  <!-- Diálogo del modal -->
+				  <div class="bg-blue-950 dark:bg-white rounded-lg shadow-xl p-6 m-4 w-full max-w-md z-10 relative">
+				    <!-- Encabezado del modal -->
+				    <div class="flex justify-between items-center mb-4">
+				      <h2 class="text-xl font-bold text-orange-600 dark:text-blue-400">Título del Modal</h2>
+				      <!-- Botón de cerrar -->
+				      <button id="cerrarModal" class="text-gray-500 hover:text-gray-700">
+				        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				        </svg>
+				      </button>
+				    </div>
+				    <!-- Contenido del modal -->
+				    <p class="text-white dark:text-gray-600">
+				      Este es el contenido de tu modal. Todo está estilizado con clases de utilidad de Tailwind.
+				    </p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Código + Explicación -->
+	<div class="w-full lg:px-6 md:px-6">
+		<h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Código</h3>
+
+		<div class="mt-10">
+	    <pre class="rounded overflow-x-auto">
+	      <code class="language-html">
+					&lt;div class="flex"&gt;
+						&lt;div class="flex-1 md:flex-col"&gt;
+							&lt;!-- Botón para abrir el modal --&gt;
+							&lt;button id="abrirModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+							  Abrir Modal
+							&lt;/button&gt;
+							&lt;!-- Estructura del Modal --&gt;
+							&lt;div id="modalContainer" class="hidden fixed inset-0 flex items-center justify-center z-50"&gt;
+							  &lt;!-- Overlay (fondo semitransparente) --&gt;
+							  &lt;div class="absolute inset-0 bg-gray-900 opacity-50"&gt;&lt;/div&gt;
+
+							  &lt;!-- Diálogo del modal --&gt;
+							  &lt;div class="bg-blue-950 dark:bg-white rounded-lg shadow-xl p-6 m-4 w-full max-w-md z-10 relative"&gt;
+							    &lt;!-- Encabezado del modal --&gt;
+							    &lt;div class="flex justify-between items-center mb-4"&gt;
+							      &lt;h2 class="text-xl font-bold text-orange-600 dark:text-blue-400"&gt;Título del Modal&lt;/h2&gt;
+							      &lt;!-- Botón de cerrar --&gt;
+							      &lt;button id="cerrarModal" class="text-gray-500 hover:text-gray-700"&gt;
+							        &lt;svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+							          &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"&gt;&lt;/path&gt;
+							        &lt;/svg&gt;
+							      &lt;/button&gt;
+							    &lt;/div&gt;
+							    &lt;!-- Contenido del modal --&gt;
+							    &lt;p class="text-white dark:text-gray-600"&gt;
+							      Este es el contenido de tu modal. Todo está estilizado con clases de utilidad de Tailwind.
+							    &lt;/p&gt;
+							  &lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+	      </code>
+	    </pre>
+	  </div>
+
+	  <div class="mt-10">
+	    <pre class="rounded overflow-x-auto">
+	      <code class="language-javascript">
+	      	const abrirModalBtn = document.getElementById('abrirModal');
+					const cerrarModalBtn = document.getElementById('cerrarModal');
+					const modalContainer = document.getElementById('modalContainer');
+
+					// Función para abrir el modal
+					abrirModalBtn.addEventListener('click', () => {
+					  modalContainer.classList.remove('hidden');
+					});
+
+					// Función para cerrar el modal
+					cerrarModalBtn.addEventListener('click', () => {
+					  modalContainer.classList.add('hidden');
+					});
+
+					// Opcional: Cerrar el modal haciendo clic fuera de él
+					modalContainer.addEventListener('click', (e) => {
+					  if (e.target === modalContainer.children[0]) {
+					    modalContainer.classList.add('hidden');
+					  }
+					});
+	      </code>
+	    </pre>
+	  </div>
+
+	  <!-- Explicación -->
+		<h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Explicación de las utilidades usadas</h3>
+		<div class="contenedor-listas">
+	    <ul class="space-y-3">
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">hidden</span>: Oculta el modal por defecto. JavaScript lo elimina para mostrarlo.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">fixed inset-0</span>: Posiciona el contenedor del modal en toda la ventana, de forma fija.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">flex items-center justify-center</span>: Centra el contenido del modal vertical y horizontalmente.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">z-50</span>: Asegura que el modal esté por encima del resto del contenido.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">absolute inset-0</span>: El overlay se extiende por todo el contenedor padre.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">bg-gray-900 opacity-50</span>: Establece el color de fondo y la opacidad del overlay.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">bg-white rounded-lg shadow-xl p-6</span>: Estilos para el diálogo del modal: color de fondo, bordes redondeados, sombra, y padding.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">relative</span>: Se usa para que el z-10 del diálogo funcione correctamente.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">max-w-md</span>: Limita el ancho del modal para que no ocupe toda la pantalla.</p>
+	      </li>
+	      <li class="flex">
+	        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+	          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+	          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+	          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+	        </svg>
+	        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">hover:bg-blue-700</span>: Variantes para cambiar el estilo al pasar el mouse por encima.</p>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
 </div>
 
-<div class="flex gap-x-4">
-	<div class="w-2/4 flex justify-center items-center">		
-		<pre class="language-css bg-gray-300 dark:bg-gray-900 p-4 rounded">
-      <code class="language-css">
-      	&#64;layer components {
-				  /* Clase base para todos los botones */
-				  .contenedor-listas {
-				    &#64;apply border border-gray-400 rounded-xl mt-10 mb-10 p-10;
-				  }
+<script>
+	const abrirModalBtn = document.getElementById('abrirModal');
+	const cerrarModalBtn = document.getElementById('cerrarModal');
+	const modalContainer = document.getElementById('modalContainer');
 
-				  /* Variantes de background */
-				  .contenedor-listas__bg {
-				    &#64;apply bg-white dark:bg-red-400 hover:bg-blue-700;
-				  }
+	// Función para abrir el modal
+	abrirModalBtn.addEventListener('click', () => {
+	  modalContainer.classList.remove('hidden');
+	});
 
-				  /* Variantes de texto */
-				  .contenedor-listas__text {
-				    &#64;apply text-gray-700 dark:text-gray-300 text-sm/7;
-				  }
-				}        
-      </code>
-    </pre>
-	</div>
-	<div class="w-2/4 flex justify-center items-center">
-		<div class="contenedor-listas contenedor-listas__bg contenedor-listas__text">
-      <div class="space-y-6">
-        <ul class="space-y-3">
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base">Item 1: contenido</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base">Item 2: contenido.</p>
-          </li>
-          <li class="flex">
-            <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3 text-base">Item 3: contenido.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-	</div>
-</div>
+	// Función para cerrar el modal
+	cerrarModalBtn.addEventListener('click', () => {
+	  modalContainer.classList.add('hidden');
+	});
+
+	// Opcional: Cerrar el modal haciendo clic fuera de él
+	modalContainer.addEventListener('click', (e) => {
+	  if (e.target === modalContainer.children[0]) {
+	    modalContainer.classList.add('hidden');
+	  }
+	});
+</script>
