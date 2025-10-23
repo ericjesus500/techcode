@@ -1,66 +1,59 @@
 <div class="container mx-auto mt-4">
 	<div class="w-full mb-10 lg:px-6 md:px-6">
 		<h1 class="underline font-mono text-lg text-blue-600 dark:text-pink-600">EJERCICIO <?= $id; ?></h1>
-		<h2 class="my-6 font-mono text-2xl text-gray-300 dark:text-yellow-400">Componente de tarjeta en un framework (React)</h2>
-		<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300">Para proyectos más grandes que utilizan frameworks de JavaScript como React, Vue o Svelte, la encapsulación de componentes es la mejor práctica. Esto te permite gestionar los estilos dentro del propio componente, pasándolos como props. </p>
+		<h2 class="my-6 font-mono text-2xl text-gray-300 dark:text-yellow-400">Cómo añadir tipografías personalizadas</h2>
+		<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300">Puedes añadir tus propias tipografías al archivo de configuración de Tailwind (tailwind.config.js). Esto es útil si quieres usar fuentes de servicios como Google Fonts o una fuente personalizada alojada localmente.</p>
+
 		<div class="mt-10 p-4 bg-gray-900 dark:bg-yellow-200 rounded">
-			<p class="pathway-extreme-p text-lg text-white dark:text-gray-900">Paso 1: Crea el componente (por ejemplo, en React) En este caso, se crea un archivo de componente (Card.jsx) que recibe los datos como props</p>
+			<p class="pathway-extreme-p text-lg text-white dark:text-gray-900">Paso 1: Importar la fuente. Primero, importa la fuente en tu archivo CSS principal (por ejemplo, input.css o main.css). Si usas Google Fonts, copia y pega el código @import que te proporcionan</p>
 		</div>
+
 		<div class="mt-10">
 			<pre class="rounded overflow-x-auto">
-				<code class="language-jsx">
-					// src/components/Card.jsx
-					import React from 'react';
+				<code class="language-css">
+					@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+				</code>
+			</pre>
+		</div>
 
-					const Card = ({ title, description, image, alt }) => {
-						return (
-							&lt;div className="max-w-sm rounded overflow-hidden shadow-lg m-4"&gt;
-								{image && &lt;img className="w-full" src={image} alt={alt} /&gt;}
-								&lt;div className="px-6 py-4"&gt;
-									{title && &lt;div className="font-bold text-xl mb-2"&gt;{title}&lt;/div&gt;}
-									{description && &lt;p className="text-gray-700 text-base"&gt;{description}&lt;/p&gt;}
-								&lt;/div&gt;
-							&lt;/div&gt;
-						);
+		<div class="mt-10 p-4 bg-gray-900 dark:bg-yellow-200 rounded">
+			<p class="pathway-extreme-p text-lg text-white dark:text-gray-900">Paso 2: Configurar el archivo tailwind.config.js. Abre tailwind.config.js y edita la sección theme.fontFamily. Puedes extender o reemplazar las fuentes por defecto</p>
+		</div>
+
+		<div class="mt-10">
+			<pre class="rounded overflow-x-auto">
+				<code class="language-javascript">
+					// tailwind.config.js
+					/** @type {import('tailwindcss').Config} */
+					module.exports = {
+						theme: {
+							extend: {
+								fontFamily: {
+									// Agrega una nueva tipografía personalizada
+									roboto: ['Roboto', 'sans-serif'],
+									// Puedes sobrescribir una de las tipografías por defecto
+									sans: ['ui-sans-serif', 'system-ui', 'Roboto', 'sans-serif'],
+								},
+							},
+						},
+						plugins: [],
 					};
-
-					export default Card;
 				</code>
 			</pre>
 		</div>
+
 		<div class="mt-10 p-4 bg-gray-900 dark:bg-yellow-200 rounded">
-			<p class="pathway-extreme-p text-lg text-white dark:text-gray-900">Paso 2: Utiliza el componente en tu aplicación. Ahora puedes importar y utilizar este componente en cualquier lugar de tu aplicación, pasándole los datos necesarios.</p>
+			<p class="pathway-extreme-p text-lg text-white dark:text-gray-900">Paso 3: Aplicar la nueva clase en el HTML. Después de configurar y recompilar tus estilos, podrás usar la nueva clase en tu HTML</p>
 		</div>
+
 		<div class="mt-10">
 			<pre class="rounded overflow-x-auto">
-				<code class="language-jsx">
-					// src/App.jsx
-					import Card from './components/Card';
-					import './index.css'; // Asegúrate de que el CSS de Tailwind está importado
-
-					function App() {
-						return (
-							&lt;div className="flex justify-center items-center h-screen"&gt;
-								&lt;Card
-									title="Artículo de blog"
-									description="Este es un componente de tarjeta reutilizable creado con Tailwind CSS."
-									image="https://via.placeholder.com/400x200"
-									alt="Imagen de ejemplo"
-								/&gt;
-								&lt;Card
-									title="Otro artículo"
-									description="Aquí está otra tarjeta con contenido diferente, pero con el mismo estilo."
-								/&gt;
-							&lt;/div&gt;
-						);
-					}
-
-					export default App;
+				<code class="language-html">
+					&lt;p class="font-roboto"&gt;
+						Este texto usa la fuente personalizada Roboto.
+					&lt;/p&gt;
 				</code>
 			</pre>
-		</div>
-		<div class="mt-10">
-			<p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300">Este enfoque mantiene el código de tu interfaz de usuario modular y limpio, facilitando las actualizaciones y el mantenimiento a medida que tu proyecto crece.</p>
 		</div>
 	</div>	
 </div>

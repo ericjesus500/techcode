@@ -9,6 +9,6 @@
     <!-- Contenido del ejercicio -->
     <div class="w-full max-w-full p-3">
       <?php include_once $rutaEjercicio; ?>
-    </div>    
+    </div>
   </div>
 </div>

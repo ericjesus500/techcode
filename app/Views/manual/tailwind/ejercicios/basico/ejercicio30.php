@@ -16,5 +16,12 @@
 				</code>
 			</pre>
 		</div>
+
+		<div class="bg-white rounded-xl shadow-lg p-6 mt-10">
+			<h2 class="text-xl font-bold dark:text-blue-400">Tarjeta de utilidades</h2>
+			<p class="text-gray-600 mt-2">
+				Este es un ejemplo que usa clases de utilidad para el diseño.
+			</p>
+		</div>
 	</div>	
 </div>

@@ -20,10 +20,12 @@
       <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="2">Capitulo 2: BreakPoints</a></li>
       <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="3">Capitulo 3: Clases de Utilidades</a></li>
       <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="4">Capitulo 4: Clases de utilidad para Layouts</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="5">Capitulo 5: Container Queries (novedad en Tailwind 4)</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="6">Capitulo 6: Componentes</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="7">Capitulo 7: Directivas de Tailwind: @apply & @layer</a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="8">Capitulo 8</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="5">Capitulo 5: Clases complementarias para Layouts</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="6">Capitulo 6: Container Queries (novedad en Tailwind 4)</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="7">Capitulo 7: Componentes</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="8">Capitulo 8: Directivas de Tailwind: @apply & @layer</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="9">Capitulo 9: El archivo tailwind.config.js</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="tailwind" data-nivel="basico" data-capitulo="10">Capitulo 10</a></li>
     </ul>
   </div>
 

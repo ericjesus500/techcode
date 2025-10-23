@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
   // Estado inicial desde localStorage
   const isSidebarHidden = localStorage.getItem('sidebarHidden') === 'false';
   if (!isSidebarHidden) {
@@ -100,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
               if (this.checked) {
                 const slug = this.dataset.slug;
                 const nivel = this.dataset.nivel;
+                
                 cargarNivel(slug, nivel);
               }
             });
@@ -135,14 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Cargar Nivel (Básico, Intermedio, Avanzado)
   function cargarNivel(slug, nivel) {
-    const nivelContenido = document.getElementById('nivel-contenido');
-    nivelContenido.innerHTML = `
-      <div class="flex items-center justify-center py-10">
-        <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
-        <span class="ml-3">Cargando nivel ${nivel}...</span>
-      </div>
-    `;
-
+    const nivelContenido = document.getElementById('nivel-contenido');    
+    
     fetch(`/manual/verNivel/${slug}/${nivel}`, {
       method: 'GET',
       headers: {
@@ -152,6 +146,12 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.text())
       .then(html => {
         //Obtener Lista de Capitulos del Nivel Seleccionado
+        nivelContenido.innerHTML = `
+          <div class="flex items-center justify-center py-10">
+            <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
+            <span class="ml-3">Cargando nivel ${nivel}...</span>
+          </div>
+        `;
         nivelContenido.innerHTML = html;
 
         //MANEJO DE LA LISTA DE CAPITULOS
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  //Obtener nivel seleccionado y capitulos del manual
+  //Obtener capitulos del manual
   function obtenerCapitulo() {
     const capitulos = document.querySelectorAll('.capitulos li a');
     const htmlCapitulo = document.querySelector('#content-capitulo');

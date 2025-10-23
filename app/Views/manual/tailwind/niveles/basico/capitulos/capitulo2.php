@@ -60,8 +60,10 @@
 
         <p class="pathway-extreme-p text-xl underline my-10 text-white">Cómo se usan:</p>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">Para aplicar una clase a partir de un breakpoint, simplemente se antepone el prefijo al nombre de la clase, seguido de dos puntos (:).</p>
+
+        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-10">Por ejemplo para cambiar el color de fondo de una cuadrícula según el tamaño de la pantalla, puedes usar los prefijos de la siguiente manera:</p>
         <div class="mt-10">
-          <pre>
+          <pre class="rounded overflow-x-auto">
             <code class="language-html">
               &lt;div class="bg-blue-500 sm:bg-green-500 md:bg-yellow-500 lg:bg-red-500 xl:bg-purple-500 2xl:bg-pink-500 p-4 text-white"&gt;
                 Este div cambia de color según el tamaño de la pantalla.
@@ -69,9 +71,10 @@
             </code>
           </pre>
         </div>
+
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-10">Para cambiar la cantidad de columnas de una cuadrícula según el tamaño de la pantalla, puedes usar los prefijos de la siguiente manera:</p>
         <div class="mt-10">
-          <pre>
+          <pre class="rounded overflow-x-auto">
             <code class="language-html">
               &lt;div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"&gt;
                 &lt;div class="bg-gray-200 p-4"&gt;Elemento 1&lt;/div&gt;
@@ -92,7 +95,7 @@
                 <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
                 <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
               </svg>
-              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Colores de fondo</span>: El div cambia su color de fondo según el tamaño de la pantalla, comenzando con azul en pantallas pequeñas y pasando por verde, amarillo, rojo, púrpura y rosa en pantallas más grandes.</p>
+              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Colores de fondo</span>: En el primer ejemplo, el div cambia su color de fondo según el tamaño de la pantalla, comenzando con azul en pantallas pequeñas y pasando por verde, amarillo, rojo, púrpura y rosa en pantallas más grandes.</p>
             </li>
             <li class="flex">
               <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
@@ -177,14 +180,14 @@
           </pre>
         </div>
         <p class="ml-6 mt-10 pathway-extreme-p text-xl text-gray-600 dark:text-white">Esto te permite usar prefijos personalizados como tablet:, laptop:, etc.</p>
-      </section>     
+      </section>
 
       <!-- Ejercicios -->
-      <section class="mt-8 p-6">
-        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+      <section class="mt-8">
+        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-6">
           <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
           <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
+            <li><a href="./ejercicios/basicos/tailwind/20" target="_blank">Uso básico de breakpoints</a></li>
             <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
             <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
           </ol>
@@ -209,11 +212,15 @@
   <!-- Subtitulos -->
   <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">:</p>
 
-  <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
+  <section>
+    <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
+    <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
+  </section>
 
-  <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
-  <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
+  <article>
+    <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
+    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
+  </article>
 
   <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
   <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
@@ -258,15 +265,15 @@
     <ul class="space-y-3">
       <li class="flex md:flex-row lg:flex-row">
         <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">.</p>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
       </li>
       <li class="flex md:flex-row lg:flex-row">
         <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">.</p>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
       </li>
       <li class="flex md:flex-row lg:flex-row">
         <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">.</p>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
       </li>
     </ul>
   </div>
