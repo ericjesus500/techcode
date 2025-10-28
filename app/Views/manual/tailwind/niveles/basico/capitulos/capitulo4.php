@@ -141,11 +141,11 @@
         <!-- Personalización de la clase container en Tailwind 4.0 -->
         <article class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Personalización de la clase container en Tailwind 4.0</h3>
-          
+
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
             En Tailwind CSS 4.0, la clase container se puede personalizar fácilmente a través del archivo de configuración tailwind.config.js. Esto permite a los desarrolladores definir anchos máximos específicos para cada breakpoint según las necesidades del proyecto.
           </p>
-          
+
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
             Para personalizar la clase container, debes modificar la sección extend dentro del objeto theme en el archivo de configuración. Aquí puedes definir los valores de maxWidth para cada breakpoint que desees personalizar.
           </p>
@@ -822,7 +822,7 @@
           <p class="ml-3 mt-10 pathway-extreme-p text-xl text-gray-600 dark:text-white">En este ejemplo, el contenedor principal utiliza la clase container para centrar y limitar el ancho del contenido, mientras que el contenedor hijo usa flex para organizar sus elementos en una fila con espacio entre ellos y alineación centrada.</p>
 
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La combinación sigue un patrón de diseño muy común:</p>
-          
+
           <div class="contenedor-listas ml-3">
             <ul class="space-y-3">
               <li class="flex md:flex-row lg:flex-row">
@@ -841,7 +841,7 @@
           </div>
 
           <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Ejemplo 2:</p>
-          
+
           <div class="mt-10 ml-3">
             <pre class="rounded overflow-x-auto">
                 <code class="language-html">
@@ -861,7 +861,7 @@
           </div>
 
           <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Explicación:</p>
-          
+
           <div class="contenedor-listas ml-3">
             <ul class="space-y-3">
               <li class="flex md:flex-row lg:flex-row">
@@ -1345,7 +1345,7 @@
           <section>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Anidación: grid dentro de flex o flex dentro de grid</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La anidación es la clave para la complejidad.</p>
-            
+
             <div class="contenedor-listas ml-3">
               <ul class="space-y-3">
                 <li class="flex md:flex-row lg:flex-row">
@@ -1358,9 +1358,9 @@
                 </li>
               </ul>
             </div>
-            
+
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Ejemplo de Anidación (grid dentro de flex):</p>
-            
+
             <div class="mt-10 overflow-x-auto ml-3">
               <pre class="rounded overflow-x-auto">
                 <code class="language-html">
@@ -1401,7 +1401,7 @@
   </div>
 </div>
 
-<!-- templates -->
+<!-- TEMPLATES -->
 <div>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
@@ -1424,9 +1424,19 @@
     <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
   </section>
 
-  <!-- Resaltado -->
-  <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">lorem</p>
+  <!-- Resaltado para capitulos-->
+  <div class="mt-10 p-4 bg-red-900 dark:bg-[#C2FFFF] border-l-sky-400 border-[#C2FFFF] border-5">
+    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Resaltado para capitulos: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
+  </div>
+  <!-- Resaltado para ejercicios-->
+  <div class="mt-10 p-4 bg-red-900 dark:bg-[#00fff7] rounded">
+    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-800">Resaltado para ejercicios: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
+  </div>
+  <!-- Notas-->
+  <div class="mt-10 p-4 bg-red-900 dark:bg-red-500 rounded">
+    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-white"><i class="bi bi-exclamation-triangle mr-2"></i>Nota: </p>
+    <hr class="border-1 border-gray-200 my-2">
+    <p class="font-mono text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium ea quidem similique labore iure reprehenderit modi quo id quia?</p>
   </div>
 
   <!-- contenedor Listas Importantes-->
@@ -1491,7 +1501,7 @@
     <p class="font-medium text-lg text-gray-600 dark:text-dark-800 mb-4"></p>
   </div>
 
-  <!-- Listas Boostrap -->
+  <!-- Listas-->
   <div>
     <ul class="my-5">
       <li class="my-2"><i class="bi bi-check-all px-2 dark:text-orange-500 text-lg"></i>.</li>
@@ -1514,8 +1524,8 @@
       <li class="my-5"><i class="bi bi-book-half px-2 dark:text-orange-500 text-lg"></i>.</li>
     </ul>
     <ul class="my-5">
-      <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>.</li>
+      <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
+      <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
     </ul>
   </div>
 

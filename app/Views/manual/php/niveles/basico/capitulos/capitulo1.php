@@ -5,8 +5,8 @@
     <article id="cap01" class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
       <h1 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo 1: FUNDAMENTOS DE PHP</h1>
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">PHP es un lenguaje de programación de uso general de código del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico.</p>
-      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">El código es interpretado por un servidor web con un módulo de procesador de PHP, el más común llamado APACHE. Puede ser usado en la mayoría de los servidores web al igual que en casi todos los sistemas operativos y plataformas sin ningún costo.</p>    
-      
+      <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">El código es interpretado por un servidor web con un módulo de procesador de PHP, el más común llamado APACHE. Puede ser usado en la mayoría de los servidores web al igual que en casi todos los sistemas operativos y plataformas sin ningún costo.</p>
+
       <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Formas de mostrar información en el navegador</h2>
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Existen varias formas. Las principales o más usadas son: echo, print, print_r() y var_dump(). Estas funciones se utilizan para mostrar datos, pero tienen usos y propósitos diferentes, especialmente en lo que respecta a la depuración y al manejo de variables estructuradas.</p>
 
@@ -69,7 +69,7 @@
               <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
               <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
             </svg>
-            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Uso</span>:  Es el método más común y rápido para imprimir datos simples como texto, números y variables de string.</p>
+            <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Uso</span>: Es el método más común y rápido para imprimir datos simples como texto, números y variables de string.</p>
           </li>
           <li class="flex">
             <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
@@ -139,7 +139,7 @@
             ?&gt;
           </code>
         </pre>
-      </div>      
+      </div>
 
       <!-- var_dump() -->
       <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>var_dump()</h3>
@@ -204,7 +204,7 @@
           </code>
         </pre>
       </div>
-      
+
       <!-- Ejercicios -->
       <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
         <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
@@ -222,33 +222,48 @@
       </div>
       <div class="content-subtitulos dark:bg-blue-400 h-auto mt-6 relative">hola</div>
     </div>
-  </div>  
+  </div>
 </div>
 
-<!-- templates -->
+<!-- TEMPLATES -->
 <div>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
   <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  
-  <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
-  
-  <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
-  <p class="ml-3 mt-5 pathway-extreme-p text-xl dark:text-white">
 
-  <h4 class="mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  
-  <!-- Resaltado -->
-  <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">lorem</p>
+  <!-- Subtitulos -->
+  <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Ejemplo:</p>
+
+  <section>
+    <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
+    <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5"></p>
+  </section>
+
+  <article class="my-14">
+    <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
+    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
+  </article>
+
+  <section>
+    <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
+    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
+  </section>
+
+  <!-- Resaltado para capitulos-->
+  <div class="mt-10 p-4 bg-red-900 dark:bg-[#C2FFFF] border-l-sky-400 border-[#C2FFFF] border-5">
+    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Resaltado para capitulos: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
+  </div>
+  <!-- Resaltado para ejercicios-->
+  <div class="mt-10 p-4 bg-red-900 dark:bg-[#00fff7] rounded">
+    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-800">Resaltado para ejercicios: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
+  </div>
+  <!-- Notas-->
+  <div class="mt-10 p-4 bg-red-900 dark:bg-red-500 rounded">
+    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-white"><i class="bi bi-exclamation-triangle mr-2"></i>Nota: </p>
+    <hr class="border-1 border-gray-200 my-2">
+    <p class="font-mono text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium ea quidem similique labore iure reprehenderit modi quo id quia?</p>
   </div>
 
-  <p class="pathway-extreme-p text-xl underline my-10 text-white">:</p>
-  <p class="pathway-extreme-p text-xl underline my-10 text-white">:</p>
-  <p class="pathway-extreme-p text-xl underline my-10 text-white">:</p>
-
-  <!-- contenedor Listas -->
+  <!-- contenedor Listas Importantes-->
   <div class="contenedor-listas">
     <ul class="space-y-3">
       <li class="flex">
@@ -278,10 +293,28 @@
     </ul>
   </div>
 
-  <!-- pre -->  
-  <div class="mt-10">
-    <pre>
-      <code class="language-javascript">        
+  <!-- contenedor Listas-->
+  <div class="contenedor-listas">
+    <ul class="space-y-3">
+      <li class="flex md:flex-row lg:flex-row">
+        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
+      </li>
+      <li class="flex md:flex-row lg:flex-row">
+        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
+      </li>
+      <li class="flex md:flex-row lg:flex-row">
+        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
+        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- pre -->
+  <div class="mt-10 overflow-x-auto">
+    <pre class="rounded overflow-x-auto">
+      <code class="language-javascript">
       </code>
     </pre>
   </div>
@@ -292,7 +325,7 @@
     <p class="font-medium text-lg text-gray-600 dark:text-dark-800 mb-4"></p>
   </div>
 
-  <!-- Listas Boostrap -->
+  <!-- Listas-->
   <div>
     <ul class="my-5">
       <li class="my-2"><i class="bi bi-check-all px-2 dark:text-orange-500 text-lg"></i>.</li>
@@ -315,8 +348,53 @@
       <li class="my-5"><i class="bi bi-book-half px-2 dark:text-orange-500 text-lg"></i>.</li>
     </ul>
     <ul class="my-5">
-      <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>    
+      <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
+      <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
+    </ul>
+  </div>
+
+  <!-- tabla -->
+  <div class="overflow-x-aut mt-6">
+    <table class="table-auto border-separate font-mono">
+      <thead class="text-blue-400">
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-sm font-mono">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="text-sm font-mono">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="text-sm font-mono">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="text-sm font-mono">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="text-sm font-mono">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="text-sm font-mono">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

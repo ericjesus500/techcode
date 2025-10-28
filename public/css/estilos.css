@@ -19,3 +19,15 @@
 .sidebar-link.active {
   @apply bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-400 font-medium rounded;
 }
+ pre[class*="language-"] {
+   background: #121f3d !important;
+   border: 2px solid #00fff5 !important;
+ }
+
+ pre.ind-pre{
+  background: #121f3d;
+  border: 2px solid #00fff5;
+  padding-left: 20px;
+  line-height: 1.5;
+  white-space: pre-line;
+ }

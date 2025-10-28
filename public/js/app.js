@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <span class="ml-3">Cargando manual...</span>
         </div>
       `;
-
+      
       fetch(`/manual/verManual/${slug}`, {
         method: 'GET',
         headers: {
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.text())
         .then(html => {
           manualContenido.innerHTML = html;
+
           const radios = document.querySelectorAll('.nivel-radio');
 
           radios.forEach(radio => {
@@ -99,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
               if (this.checked) {
                 const slug = this.dataset.slug;
                 const nivel = this.dataset.nivel;
-                
                 cargarNivel(slug, nivel);
               }
             });
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <span class="ml-3">Cargando nivel ${nivel}...</span>
           </div>
         `;
-        nivelContenido.innerHTML = html;
+        nivelContenido.innerHTML = html;        
 
         //MANEJO DE LA LISTA DE CAPITULOS
 
