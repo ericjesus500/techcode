@@ -1,14 +1,14 @@
 <!-- Capitulo 03: Clases de Utilidades -->
 <hr>
-<div class="container mx-auto my-8">
+<article id="cap3" class="mx-auto w-full mt-4">
   <div class="flex md:flex-row">
-    <article id="cap3" class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
+    <section class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
       <h1 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300 mb-4">Capítulo <?= $capitulo; ?>: Clases de Utilidades</h1>
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">En Tailwind 4, las utilidades son clases de bajo nivel que aplican una única propiedad CSS, mientras que los componentes son abstracciones de estilos reutilizables que agrupan múltiples utilidades.</p>
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">La principal diferencia radica en su granularidad: las utilidades se aplican directamente en el HTML para un control preciso, mientras que los componentes son clases personalizadas que encapsulan patrones de diseño comunes.</p>
 
       <!-- Utilidades -->
-      <section>
+      <article class="mt-8 p-6">
         <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Utilidades</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">Las utilidades son la base de Tailwind, su enfoque es "utility-first". Son atajos para propiedades CSS comunes que permiten construir interfaces directamente en el marcado HTML. En la versión 4, su uso se ha simplificado y optimizado.</p>
 
@@ -58,78 +58,81 @@
             </code>
           </pre>
         </div>
+        
+        <!-- Diferencias entre clases de utilidades y componentes -->
+        <section>
+          <h3 class="font-mono font-medium mt-14 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Diferencias entre clases de utilidades y componentes</h3>
 
-        <h3 class="font-mono font-medium mt-14 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Diferencias entre clases de utilidades y componentes</h3>
+          <div class="overflow-x-aut mt-6">
+            <table class="table-auto border-separate font-mono">
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>Utilidades</th>
+                  <th>Componentes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-sm">
+                  <td>Nivel</td>
+                  <td>Bajo nivel, granular</td>
+                  <td>Alto nivel, abstracto</td>
+                </tr>
+                <tr class="text-sm">
+                  <td>Encapsulación</td>
+                  <td>No encapsulan lógica</td>
+                  <td>Agrupan múltiples utilidades bajo una clase</td>
+                </tr>
+                <tr class="text-sm">
+                  <td>Nombre</td>
+                  <td>Descriptivo de la propiedad CSS (flex, p-4)</td>
+                  <td>Semántico (.btn, .card).</td>
+                </tr>
+                <tr class="text-sm">
+                  <td>Reusabilidad</td>
+                  <td>Se combinan para crear bloques.</td>
+                  <td>Se reutiliza una única clase para un bloque completo.</td>
+                </tr>
+                <tr class="text-sm">
+                  <td>Mantenimiento</td>
+                  <td>Puede generar HTML verboso.</td>
+                  <td>Simplifica el marcado, ideal para patrones repetitivos.</td>
+                </tr>
+                <tr class="text-sm">
+                  <td>Uso ideal</td>
+                  <td>Para diseño rápido, prototipado y estilos únicos.</td>
+                  <td>Para elementos que se repiten con el mismo aspecto (botones, tarjetas, etc.).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-        <div class="overflow-x-aut mt-6">
-          <table class="table-auto border-separate font-mono">
-            <thead>
-              <tr>
-                <th>Característica</th>
-                <th>Utilidades</th>
-                <th>Componentes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="text-sm">
-                <td>Nivel</td>
-                <td>Bajo nivel, granular</td>
-                <td>Alto nivel, abstracto</td>
-              </tr>
-              <tr class="text-sm">
-                <td>Encapsulación</td>
-                <td>No encapsulan lógica</td>
-                <td>Agrupan múltiples utilidades bajo una clase</td>
-              </tr>
-              <tr class="text-sm">
-                <td>Nombre</td>
-                <td>Descriptivo de la propiedad CSS (flex, p-4)</td>
-                <td>Semántico (.btn, .card).</td>
-              </tr>
-              <tr class="text-sm">
-                <td>Reusabilidad</td>
-                <td>Se combinan para crear bloques.</td>
-                <td>Se reutiliza una única clase para un bloque completo.</td>
-              </tr>
-              <tr class="text-sm">
-                <td>Mantenimiento</td>
-                <td>Puede generar HTML verboso.</td>
-                <td>Simplifica el marcado, ideal para patrones repetitivos.</td>
-              </tr>
-              <tr class="text-sm">
-                <td>Uso ideal</td>
-                <td>Para diseño rápido, prototipado y estilos únicos.</td>
-                <td>Para elementos que se repiten con el mismo aspecto (botones, tarjetas, etc.).</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Cuándo usar utilidades vs. componentes:</p>
-        <div class="contenedor-listas">
-          <ul class="space-y-3">
-            <li class="flex">
-              <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-                <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-                <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-                <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-              </svg>
-              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Usa utilidades</span>: cuando los estilos son únicos o no se van a reutilizar en muchos lugares. Es ideal para maquetación y diseño detallado.</p>
-            </li>
-            <li class="flex">
-              <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-                <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-                <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-                <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-              </svg>
-              <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Usa componentes</span>: cuando tienes patrones de diseño que se repiten en tu proyecto (ej: botones, tarjetas, modales). Simplifica el código y facilita el mantenimiento a largo plazo.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <p class="pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Cuándo usar utilidades vs. componentes:</p>
+          <div class="contenedor-listas">
+            <ul class="space-y-3">
+              <li class="flex">
+                <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+                  <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+                  <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+                  <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+                </svg>
+                <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Usa utilidades</span>: cuando los estilos son únicos o no se van a reutilizar en muchos lugares. Es ideal para maquetación y diseño detallado.</p>
+              </li>
+              <li class="flex">
+                <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
+                  <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
+                  <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
+                  <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
+                </svg>
+                <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">Usa componentes</span>: cuando tienes patrones de diseño que se repiten en tu proyecto (ej: botones, tarjetas, modales). Simplifica el código y facilita el mantenimiento a largo plazo.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
 
       <!-- Clases de utilidad para Layout -->
-      <section>
+      <article class="mt-8 p-6">
         <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Clases de utilidad para Layout</h2>
 
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">
@@ -178,7 +181,7 @@
         </p>
 
         <!-- Control del Tipo de Caja (Display) -->
-        <article>
+        <section>
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Control del Tipo de Caja (Display)</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
             Estas clases definen cómo se comporta un elemento con respecto al flujo de la página y a sus elementos hermanos.
@@ -245,10 +248,10 @@
               </code>
             </pre>
           </div>
-        </article>
+        </section>
 
         <!-- Posicionamiento (Position) -->
-        <article>
+        <section>
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Posicionamiento (Position)</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
             Estas clases controlan cómo se posicionan los elementos en relación con su contenedor y otros elementos.
@@ -308,10 +311,10 @@
               </code>
             </pre>
           </div>
-        </article>
+        </section>
 
         <!-- Índice de Apilamiento (Z-Index) -->
-        <article>
+        <section>
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Índice de Apilamiento (Z-Index)</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
             La utilidad z-index controla el orden de apilamiento de los elementos posicionados (relative, absolute, fixed, sticky). Los valores más altos se superponen a los valores más bajos.
@@ -382,10 +385,10 @@
               </code>
             </pre>
           </div>
-        </article>
+        </section>
 
         <!-- Visibilidad y Flujo de Contenido -->
-        <article>
+        <section>
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Visibilidad y Flujo de Contenido</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
             Estas clases controlan la visibilidad de los elementos, sin alterar el display, y controlan cómo se maneja el contenido desbordado.
@@ -454,11 +457,11 @@
               </code>
             </pre>
           </div>
-        </article>
-      </section>
+        </section>
+      </article>
 
       <!-- Ejercicios -->
-      <section class="mt-8">
+      <article class="mt-8 p-6">
         <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-6">
           <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
           <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
@@ -466,188 +469,14 @@
             <li><a href="./ejercicios/basicos/tailwind/31" target="_blank">Práctica creación de un modal</a></li>
           </ol>
         </div>
-      </section>
-    </article>
+      </article>
+    </section>
 
-    <aside id="subtitulos " class="w-1/4 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
+    <aside id="subtitulos " class="flex-1 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
       <div class="mt-3 h-8 dark:bg-pink-100">
         <h2 class="text-xl font-mono text-center">Sub Capitulos</h2>
       </div>
       <div class="content-subtitulos dark:bg-blue-400 h-auto mt-6 relative">hola</div>
     </aside>
   </div>
-</div>
-
-<!-- TEMPLATES -->
-<div>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-
-  <!-- Subtitulos -->
-  <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Ejemplo:</p>
-
-  <section>
-    <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
-    <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5"></p>
-  </section>
-
-  <article class="my-14">
-    <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
-    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
-  </article>
-
-  <section>
-    <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
-    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
-  </section>
-
-  <!-- Resaltado para capitulos-->
-  <div class="mt-10 p-4 bg-red-900 dark:bg-[#C2FFFF] border-l-sky-400 border-[#C2FFFF] border-5">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Resaltado para capitulos: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
-  </div>
-  <!-- Resaltado para ejercicios-->
-  <div class="mt-10 p-4 bg-red-900 dark:bg-[#00fff7] rounded">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-800">Resaltado para ejercicios: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
-  </div>
-  <!-- Notas-->
-  <div class="mt-10 p-4 bg-red-900 dark:bg-red-500 rounded">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-white"><i class="bi bi-exclamation-triangle mr-2"></i>Nota: </p>
-    <hr class="border-1 border-gray-200 my-2">
-    <p class="font-mono text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium ea quidem similique labore iure reprehenderit modi quo id quia?</p>
-  </div>
-
-  <!-- contenedor Listas Importantes-->
-  <div class="contenedor-listas">
-    <ul class="space-y-3">
-      <li class="flex">
-        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-        </svg>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>:</p>
-      </li>
-      <li class="flex">
-        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-        </svg>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-      <li class="flex">
-        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-        </svg>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-    </ul>
-  </div>
-
-  <!-- contenedor Listas-->
-  <div class="contenedor-listas">
-    <ul class="space-y-3">
-      <li class="flex md:flex-row lg:flex-row">
-        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-      <li class="flex md:flex-row lg:flex-row">
-        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-      <li class="flex md:flex-row lg:flex-row">
-        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-    </ul>
-  </div>
-
-  <!-- pre -->
-  <div class="mt-10 overflow-x-auto">
-    <pre class="rounded overflow-x-auto">
-      <code class="language-javascript">
-      </code>
-    </pre>
-  </div>
-
-  <!-- conclusion -->
-  <div class="mt-8 p-6 bg-blue-50 dark:bg-yellow-50 rounded-lg">
-    <h4 class="font-mono font-bold text-2xl text-blue-800 dark:text-blue-600 mb-2">Conclusión</h4>
-    <p class="font-medium text-lg text-gray-600 dark:text-dark-800 mb-4"></p>
-  </div>
-
-  <!-- Listas-->
-  <div>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-check-all px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-check-all px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-back px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-back px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-caret-right-fill px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-caret-right-fill px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-shield-fill-check px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-shield-fill-check px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-book-half px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-book-half px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
-    </ul>
-  </div>
-
-  <!-- tabla -->
-  <div class="overflow-x-aut mt-6">
-    <table class="table-auto border-separate font-mono">
-      <thead class="text-blue-400">
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+</article>

@@ -39,15 +39,17 @@
         </div>
     </div>
     <!-- Contenido del nivel + Busqueda de tema-->
-    <div class="w-full max-w-full flex md:flex-row lg:flex-row md:box-border lg:box-border">
-        <div class="prose dark:prose-invert w-full max-w-full">
-            <div id="nivel-contenido" class="w-full max-w-full p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <p class="text-gray-500 dark:text-gray-400">Selecciona un nivel para ver AQUI su contenido.</p>
+    <section id="nivel-contenido">
+        <div class="w-full max-w-full flex md:flex-row lg:flex-row md:box-border lg:box-border">
+            <div class="prose dark:prose-invert w-full max-w-full">
+                <div class="w-full max-w-full p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <p class="text-gray-500 dark:text-gray-400">Selecciona un nivel para ver AQUI su contenido.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Modal de la busqueda del header -->
-    <div id="modalContainer" class="hidden fixed inset-0 z-50">
+    <section id="modalContainer" class="hidden fixed inset-0 z-50">
         <div class="flex items-center justify-center ">
             <!-- Overlay (fondo semitransparente) -->
             <div class="absolute inset-0 bg-gray-900 dark:opacity-50"></div>
@@ -95,5 +97,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>

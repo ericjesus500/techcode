@@ -1,13 +1,13 @@
 <!-- Capitulo 04: Clases de utilidad para Layouts -->
 <hr>
-<div class="container mx-auto my-8">
+<article id="cap4" class="mx-auto w-full mt-4">
   <div class="flex md:flex-row">
-    <article id="cap4" class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
+    <section class="w-3/4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow md:box-border lg:box-border">
       <h1 class="text-3xl font-semibold font-roboto text-gray-700 dark:text-blue-300">Capítulo <?= $capitulo; ?>: Clases de utilidad para Layouts</h1>
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">En este capítulo, exploraremos las clases de utilidad que Tailwind CSS ofrece para crear layouts efectivos y responsivos. Estas clases facilitan la organización y disposición de los elementos en una página web, permitiendo a los desarrolladores construir interfaces de usuario atractivas y funcionales con facilidad.</p>
 
       <!-- La clase container -->
-      <section>
+      <article class="mt-8 p-6">
         <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">La clase container</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">La clase <code><span class="text-xl text-gray-600 dark:text-green-300">container</span></code> en Tailwind CSS es una utilidad esencial para crear layouts responsivos y centrados. Esta clase ajusta automáticamente el ancho máximo de un elemento según el tamaño de la pantalla, lo que facilita la creación de diseños que se adaptan a diferentes dispositivos.</p>
 
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Uso de la clase container -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Uso de la clase container</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Para usar la clase container, simplemente agrégala a un elemento HTML, como un div, que envuelva el contenido principal de tu página. Tailwind CSS aplicará estilos predefinidos que incluyen márgenes automáticos a los lados para centrar el contenedor y establecerá anchos máximos específicos para diferentes puntos de interrupción (breakpoints).</p>
 
@@ -89,10 +89,10 @@
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white mb-4">
             En resumen, la clase container es una herramienta esencial en Tailwind CSS para crear diseños web responsivos y bien estructurados, facilitando la gestión del ancho del contenido y asegurando una experiencia de usuario óptima en diferentes dispositivos.
           </p>
-        </article>
+        </section>
 
         <!-- Comportamiento Predeterminado (Max-Widths) -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Comportamiento Predeterminado (Max-Widths)</h3>
 
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
@@ -100,7 +100,7 @@
           </p>
 
           <!-- El Comportamiento Responsivo de container -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">El Comportamiento Responsivo de container</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase container aplica sus reglas de ancho máximo (max-width) a todos los breakpoints definidos en la configuración de Tailwind, comenzando desde el más pequeño (sm).</p>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">El comportamiento predeterminado es:</p>
@@ -117,10 +117,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </article>
 
           <!-- ¿Por qué no usar prefijos responsivos? -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">¿Por qué no usar prefijos responsivos?</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase container está diseñada para ser una utilidad de "todo-en-uno" para el diseño de layout principal. No se comporta como otras utilidades que solo se activan en un breakpoint específico.</p>
             <div class="contenedor-listas ml-3">
@@ -135,11 +135,11 @@
                 </li>
               </ul>
             </div>
-          </section>
-        </article>
+          </article>
+        </section>
 
         <!-- Personalización de la clase container en Tailwind 4.0 -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Personalización de la clase container en Tailwind 4.0</h3>
 
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">
@@ -180,18 +180,18 @@
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white mb-4">
             Esta personalización permite a los desarrolladores adaptar la clase container a las necesidades específicas de su diseño, asegurando que el contenido se presente de manera óptima en diferentes tamaños de pantalla.
           </p>
-        </article>
-      </section>
+        </section>
+      </article>
 
       <!-- La clase flexbox -->
-      <section>
+      <article class="mt-8 p-6">
         <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">La clase Flexbox</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Flexbox, o Flexible Box Layout, es un modelo de diseño en CSS que permite distribuir espacio entre los elementos de una interfaz y alinear contenido de manera eficiente dentro de un contenedor, incluso cuando su tamaño es desconocido o dinámico. Tailwind CSS proporciona una serie de clases de utilidad que facilitan la implementación de Flexbox en tus proyectos web.</p>
 
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Flexbox es un modelo de diseño unidimensional que permite distribuir espacio entre los elementos de una interfaz y alinear contenido de manera eficiente dentro de un contenedor, incluso cuando su tamaño es desconocido o dinámico.</p>
 
         <!-- Características principales -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Características principales</h3>
 
           <div class="contenedor-listas ml-3">
@@ -222,10 +222,10 @@
               </li>
             </ul>
           </div>
-        </article>
+        </section>
 
         <!-- La clase flex y sus complementos -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>La clase flex y sus complementos</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase flex habilita un contenedor flex</p>
 
@@ -265,10 +265,10 @@
               </li>
             </ul>
           </div>
-        </article>
+        </section>
 
         <!-- Cómo usar la clase flex -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Cómo usar la clase flex</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Para utilizar Flexbox en Tailwind CSS, simplemente agrega la clase <code><span class="text-xl text-gray-600 dark:text-green-300">flex</span></code> a un contenedor padre, y éste pasará a ser un contenedor-flexible. Esto cambia el comportamiento de sus hijos directos (los ítems flexibles), permitiendo control preciso sobre su:</p>
 
@@ -304,10 +304,10 @@
               </code>
             </pre>
           </div>
-        </article>
+        </section>
 
         <!-- Casos de uso -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Casos de uso</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Flexbox es ideal para una variedad de casos de uso en el diseño web, incluyendo:</p>
           <div class="contenedor-listas ml-3">
@@ -360,15 +360,15 @@
               </tbody>
             </table>
           </div>
-        </article>
+        </section>
 
         <!-- Clases que se complementan con flex -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Clases que se complementan con flex</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase flex rara vez se usa sola. Se complementa con otras utilidades que definen la dirección, alineación y comportamiento de crecimiento de los ítems.</p>
 
           <!-- Dirección y Envoltura -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Dirección y Envoltura</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Estas clases definen si los ítems se disponen en fila o columna y si se ajustan a la siguiente línea (wrap).</p>
 
@@ -400,10 +400,10 @@
                 </tbody>
               </table>
             </div>
-          </section>
+          </article>
 
           <!-- Alineación y Justificación -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Alineación y Justificación</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Estas clases son cruciales para el posicionamiento a lo largo de los dos ejes:</p>
 
@@ -452,10 +452,10 @@
                 </tbody>
               </table>
             </div>
-          </section>
+          </article>
 
           <!-- Comportamiento de Ítems Individuales -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Comportamiento de Ítems Individuales</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Estas clases permiten controlar cómo los ítems hijos crecen, se encogen o se alinean dentro del contenedor flex.</p>
 
@@ -497,10 +497,10 @@
                 </tbody>
               </table>
             </div>
-          </section>
+          </article>
 
           <!-- Personalización de Ítems Flexibles -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Personalización de Ítems Flexibles</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Además de las clases para el crecimiento y encogimiento (grow, shrink, flex-1), hay otras utilidades esenciales que se aplican a los hijos flex para lograr diseños específicos:</p>
 
@@ -698,24 +698,24 @@
                 </li>
               </ul>
             </div>
-          </section>
-        </article>
+          </article>
+        </section>
 
         <!-- La clase gap -->
-        <article>
+        <section>
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>La clase gap</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase gap es una utilidad crucial, no solo para Flexbox sino también para Grid, que simplifica enormemente el manejo del espaciado entre los ítems.</p>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase gap es una utilidad poderosa que se utiliza junto con flex para definir el espacio entre los ítems flexibles sin necesidad de aplicar márgenes individuales a cada elemento. Esto simplifica el código y asegura un espaciado consistente.</p>
 
           <!-- ¿Qué es y Cómo Funciona gap? -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">¿Qué es y Cómo Funciona gap?</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase gap establece un espacio uniforme entre las filas y/o columnas de los ítems flexibles dentro de un contenedor flex, sin tener que aplicar márgenes (como mr-4 o space-x-4) a los ítems individuales.</p>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase gap aplica la propiedad CSS nativa gap (o sus equivalentes específicos row-gap y column-gap) al contenedor flex (el padre).</p>
-          </section>
+          </article>
 
           <!-- Cómo Utilizarla -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Cómo Utilizarla</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Se puede definir un espaciado general, o un espaciado separado para filas y columnas.</p>
 
@@ -797,11 +797,11 @@
             </div>
 
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">El uso de gap es la práctica moderna recomendada en Flexbox y Grid, ya que es más limpio y evita problemas con márgenes extra en los bordes del contenedor.</p>
-          </section>
-        </article>
+          </article>
+        </section>
 
         <!-- Combinación de flex con la clase container -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Combinación de flex con la clase container</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La clase container se puede combinar eficazmente con flex para crear layouts responsivos y centrados. Al aplicar container a un contenedor padre y flex a un contenedor hijo, puedes aprovechar las ventajas de ambos sistemas de diseño.</p>
 
@@ -874,17 +874,17 @@
               </li>
             </ul>
           </div>
-        </article>
-      </section>
+        </section>
+      </article>
 
       <!-- La clase grid -->
-      <section>
+      <article class="mt-8 p-6">
         <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">La clase Grid</h2>
         <p class="mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">CSS Grid es un sistema de diseño bidimensional (cuadrícula) que permite crear layouts complejos dividiendo el espacio en filas y columnas. A diferencia de Flexbox, que es unidimensional, Grid facilita la organización tanto horizontal como vertical de los elementos.</p>
         <p class="mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">La clase grid es la utilidad inicial que transforma un elemento HTML en un contenedor de rejilla (Grid Container), lo que permite aplicar todas las demás utilidades de Grid a sus hijos.</p>
 
         <!-- Características principales -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Características principales</h3>
           <div class="contenedor-listas ml-3">
             <ul class="space-y-3">
@@ -914,10 +914,10 @@
               </li>
             </ul>
           </div>
-        </article>
+        </section>
 
         <!-- Diferencia Clave: Grid vs. Flexbox -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Diferencia Clave: Grid vs. Flexbox</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La diferencia fundamental entre Grid y Flexbox radica en su enfoque de diseño. Flexbox es unidimensional, ideal para alinear elementos en una sola dirección (fila o columna), mientras que Grid es bidimensional, permitiendo un control completo sobre filas y columnas simultáneamente.</p>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Esta capacidad bidimensional hace que Grid sea especialmente adecuado para layouts complejos donde se requiere un control preciso tanto horizontal como vertical, como en diseños de páginas completas o componentes con múltiples áreas de contenido.</p>
@@ -945,15 +945,15 @@
               </tbody>
             </table>
           </div>
-        </article>
+        </section>
 
         <!-- Definición de la Estructura de la Rejilla -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Definición de la Estructura de la Rejilla</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Una vez que se aplica grid, el siguiente paso es definir el número de filas y columnas que tendrá la grilla.</p>
 
           <!-- Definición de Columnas -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Definición de Columnas</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Para definir el número de columnas en la rejilla, se utilizan las clases grid-cols-{n}, donde {n} es el número de columnas deseadas y el ancho de cada una utilizando la unidad fraccional (fr).</p>
 
@@ -1009,10 +1009,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </article>
 
           <!-- Definición de Filas -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Definición de Filas</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Similar a las columnas, las filas se definen usando las clases grid-rows-{n}, donde {n} es el número de filas deseadas. Si no se definen, las filas se crean implícitamente según el número de ítems.</p>
 
@@ -1064,10 +1064,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </article>
 
           <!-- Ejemplo -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Ejemplo</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Aquí hay un ejemplo completo que combina la definición de filas y columnas en una rejilla:</p>
 
@@ -1087,11 +1087,11 @@
             </div>
 
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">En este ejemplo, se crea una rejilla con 3 columnas y 2 filas, y se aplica un espacio uniforme entre los elementos usando gap-4.</p>
-          </section>
-        </article>
+          </article>
+        </section>
 
         <!-- Dimensiones y Posicionamiento de Ítems (col-span y row-span) -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Dimensiones y Posicionamiento de Ítems (col-span y row-span)</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white mb-4">Dentro de una rejilla, los ítems pueden ocupar múltiples columnas o filas utilizando las clases col-span-{n} y row-span-{n}, donde {n} es el número de columnas o filas que el ítem debe abarcar y dónde deben comenzar o terminar.</p>
 
@@ -1129,7 +1129,7 @@
           </div>
 
           <!-- Posición de Línea (col-start, col-end) -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Posición de Línea (col-start, col-end)</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Además de definir el tamaño de los ítems, también se puede controlar su posición exacta en la rejilla utilizando las clases col-start-{n} y col-end-{n} para columnas, y row-start-{n} y row-end-{n} para filas. Aquí, {n} representa la línea de inicio o fin en la rejilla.</p>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Estas clases fuerzan al ítem a comenzar o terminar en una línea de la grilla específica (las líneas se numeran desde 1) permitiendo ubicar un ítem en una posición específica dentro de la rejilla, proporcionando un control preciso sobre el diseño.</p>
@@ -1156,10 +1156,10 @@
                 </tbody>
               </table>
             </div>
-          </section>
+          </article>
 
           <!-- Ejemplo Práctico (Span) -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Ejemplo Práctico (Span)</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Diseño con una columna lateral y un contenido principal que abarca dos columnas::</p>
             <div class="mt-10 overflow-x-auto ml-3">
@@ -1174,11 +1174,11 @@
               </pre>
             </div>
 
-          </section>
-        </article>
+          </article>
+        </section>
 
         <!-- Espaciado -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Espaciado</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white mb-4">Al igual que en Flexbox, la clase gap es la forma estándar de añadir espacio entre los ítems de la grilla.</p>
           <div class="contenedor-listas ml-3">
@@ -1197,10 +1197,10 @@
               </li>
             </ul>
           </div>
-        </article>
+        </section>
 
         <!-- Flujo Implícito (grid-flow-*)-->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Flujo Implícito (grid-flow-*)</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white mb-4">Esta clase controla cómo se colocan automáticamente los ítems que no tienen una posición explícita (col-start/row-start).</p>
           <div class="overflow-x-aut mt-6 ml-3">
@@ -1235,10 +1235,10 @@
               </tbody>
             </table>
           </div>
-        </article>
+        </section>
 
         <!-- Ejemplo Práctico (Flujo Denso) -->
-        <article class="my-14">
+        <section class="my-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Ejemplo Práctico (Flujo Denso)</h3>
           <div class="mt-10 overflow-x-auto ml-3">
             <pre class="rounded overflow-x-auto">
@@ -1253,11 +1253,11 @@
               </code>
             </pre>
           </div>
-        </article>
-      </section>
+        </section>
+      </article>
 
       <!-- Combinando las clases Container, Flex y Grid -->
-      <section>
+      <article>
         <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Combinando las clases Container, Flex y Grid</h2>
         <p class="mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Es muy común combinar las clases container, flex, y grid en Tailwind CSS 4.0. De hecho, esta combinación representa una práctica profesional estándar para construir diseños web complejos y responsivos.</p>
 
@@ -1280,12 +1280,12 @@
         </div>
 
         <!-- Patrones de Combinación Comunes -->
-        <article>
+        <section>
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Patrones de Combinación Comunes</h3>
           <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Aquí se muestra cómo se utilizan estas clases juntas en una estructura modular típica:</p>
 
           <!-- container + grid (Diseño de Página Principal) -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">container + grid (Diseño de Página Principal)</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Este es el patrón más común para el diseño de layout de una página completa, como un panel de control o una página con barra lateral.</p>
 
@@ -1310,10 +1310,10 @@
               </code>
             </pre>
             </div>
-          </section>
+          </article>
 
           <!-- container + flex (Barra de Navegación o Hero Centrado) -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">container + flex (Barra de Navegación o Hero Centrado)</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Este patrón es ideal para componentes que solo necesitan alineación unidimensional y deben estar contenidos dentro del ancho máximo de la página.</p>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Propósito: Centrar un componente horizontalmente y usar Flexbox para distribuir sus elementos internos.</p>
@@ -1339,10 +1339,10 @@
                 </code>
               </pre>
             </div>
-          </section>
+          </article>
 
           <!-- Anidación: grid dentro de flex o flex dentro de grid -->
-          <section>
+          <article>
             <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">Anidación: grid dentro de flex o flex dentro de grid</h4>
             <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">La anidación es la clave para la complejidad.</p>
 
@@ -1377,200 +1377,26 @@
                 </code>
               </pre>
             </div>
-          </section>
-        </article>
-      </section>
+          </article>
+        </section>
+      </article>
 
       <!-- Ejercicios -->
-      <section class="mt-8">
+      <article class="mt-8">
         <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-6">
           <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
           <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
             <li><a href="./ejercicios/basicos/tailwind/40" target="_blank">Uso de la clase <span class="text-blue-600 dark:text-green-300">container</span></a></li>
           </ol>
         </div>
-      </section>
-    </article>
+      </article>
+    </section>
 
-    <aside id="subtitulos " class="w-1/4 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
+    <aside id="subtitulos " class="flex-1 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">
       <div class="mt-3 h-8 dark:bg-pink-100">
         <h2 class="text-xl font-mono text-center">Sub Capitulos</h2>
       </div>
       <div class="content-subtitulos dark:bg-blue-400 h-auto mt-6 relative">hola</div>
     </aside>
   </div>
-</div>
-
-<!-- TEMPLATES -->
-<div>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-  <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-
-  <!-- Subtitulos -->
-  <p class="ml-3 pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Ejemplo:</p>
-
-  <section>
-    <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">H2</h2>
-    <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5"></p>
-  </section>
-
-  <article class="my-14">
-    <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>H3</h3>
-    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
-  </article>
-
-  <section>
-    <h4 class="ml-3 mt-10 text-xl font-mono text-gray-300 dark:text-pink-400 underline">H4</h4>
-    <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
-  </section>
-
-  <!-- Resaltado para capitulos-->
-  <div class="mt-10 p-4 bg-red-900 dark:bg-[#C2FFFF] border-l-sky-400 border-[#C2FFFF] border-5">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900">Resaltado para capitulos: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
-  </div>
-  <!-- Resaltado para ejercicios-->
-  <div class="mt-10 p-4 bg-red-900 dark:bg-[#00fff7] rounded">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-800">Resaltado para ejercicios: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab dignissimos numquam eius atque perspiciatis consequuntur libero doloremque, consequatur accusamus.</p>
-  </div>
-  <!-- Notas-->
-  <div class="mt-10 p-4 bg-red-900 dark:bg-red-500 rounded">
-    <p class="pathway-extreme-p text-lg text-gray-600 dark:text-white"><i class="bi bi-exclamation-triangle mr-2"></i>Nota: </p>
-    <hr class="border-1 border-gray-200 my-2">
-    <p class="font-mono text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium ea quidem similique labore iure reprehenderit modi quo id quia?</p>
-  </div>
-
-  <!-- contenedor Listas Importantes-->
-  <div class="contenedor-listas">
-    <ul class="space-y-3">
-      <li class="flex">
-        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-        </svg>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>:</p>
-      </li>
-      <li class="flex">
-        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-        </svg>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-      <li class="flex">
-        <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-          <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-          <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-          <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-        </svg>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-    </ul>
-  </div>
-
-  <!-- contenedor Listas-->
-  <div class="contenedor-listas">
-    <ul class="space-y-3">
-      <li class="flex md:flex-row lg:flex-row">
-        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-      <li class="flex md:flex-row lg:flex-row">
-        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-      <li class="flex md:flex-row lg:flex-row">
-        <i class="bi bi-check2-square px-2 dark:text-orange-500 text-lg"></i>
-        <p class="ml-3 text-base pathway-extreme-p text-white"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400"></span>: .</p>
-      </li>
-    </ul>
-  </div>
-
-  <!-- pre -->
-  <div class="mt-10 overflow-x-auto">
-    <pre class="rounded overflow-x-auto">
-      <code class="language-javascript">
-      </code>
-    </pre>
-  </div>
-
-  <!-- conclusion -->
-  <div class="mt-8 p-6 bg-blue-50 dark:bg-yellow-50 rounded-lg">
-    <h4 class="font-mono font-bold text-2xl text-blue-800 dark:text-blue-600 mb-2">Conclusión</h4>
-    <p class="font-medium text-lg text-gray-600 dark:text-dark-800 mb-4"></p>
-  </div>
-
-  <!-- Listas-->
-  <div>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-check-all px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-check-all px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-back px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-back px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-caret-right-fill px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-caret-right-fill px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-shield-fill-check px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-shield-fill-check px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-book-half px-2 dark:text-orange-500 text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-book-half px-2 dark:text-orange-500 text-lg"></i>.</li>
-    </ul>
-    <ul class="my-5">
-      <li class="my-2"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
-      <li class="my-5"><i class="bi bi-check2-square px-2 dark:text-[#00fff5] text-lg"></i>.</li>
-    </ul>
-  </div>
-
-  <!-- tabla -->
-  <div class="overflow-x-aut mt-6">
-    <table class="table-auto border-separate font-mono">
-      <thead class="text-blue-400">
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="text-sm font-mono">
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+</article>

@@ -1,4 +1,4 @@
-<section class="space-y-8 max-w-full min-w-0">
+<section class="space-y-8 max-w-full w-full min-w-0">
   <div class="flex items-center justify-between">
     <h2 class="text-2xl font-bold text-gray-800 dark:text-white">📜 Capítulos</h2>
     <button id="toggleCapitulos" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
@@ -23,5 +23,5 @@
     </ul>
   </div>
 
-  <div id="content-capitulo" class="box-border"></div>
+  <div id="content-capitulo" class="w-full max-w-full box-border min-w-0"></div>
 </section>
