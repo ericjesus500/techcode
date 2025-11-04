@@ -9,7 +9,7 @@
 
       <!-- 1.1 Pre-requisitos -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.1 Pre-requisitos</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.1 Pre-requisitos</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Antes de sumergirnos en Tailwind CSS, es fundamental tener una comprensión sólida de los conceptos básicos de CSS. Aquí hay algunos pre-requisitos clave que debes dominar:</p>
         <div class="contenedor-listas">
           <ul class="space-y-3">
@@ -43,7 +43,7 @@
 
       <!-- 1.2 El archivo tailwind.config.js -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.2 El archivo tailwind.config.js</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.2 El archivo tailwind.config.js</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">El archivo <span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-400">tailwind.config.js</span> es el corazón de la personalización de Tailwind. Aquí puedes llevar tu diseño al siguiente nivel extendiendo y anulando la configuración por defecto para adaptarla a la identidad de tu proyecto. A continuación, se detallan los aspectos más importantes que debes conocer sobre este archivo:</p>
         <div class="contenedor-listas">
           <ul class="space-y-3">
@@ -69,7 +69,7 @@
 
       <!-- 1.3 Responsive Design -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.3 Responsive Design</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.3 Responsive Design</h2>
         <div class="contenedor-listas">
           <ul class="space-y-3">
             <li class="flex">
@@ -86,7 +86,7 @@
 
       <!-- 1.4 Estados (pseudoclases y variantes) -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.4 Estados (pseudoclases y variantes)</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.4 Estados (pseudoclases y variantes)</h2>
         <div class="contenedor-listas">
           <ul class="space-y-3">
             <li class="flex">
@@ -111,7 +111,7 @@
 
       <!-- 1.5 Directivas de Tailwind -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.5 Directivas de Tailwind</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.5 Directivas de Tailwind</h2>
         <div class="contenedor-listas">
           <ul class="space-y-3">
             <li class="flex">
@@ -144,7 +144,7 @@
 
       <!-- 1.6 Creación de componentes reutilizables -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.6 Creación de componentes reutilizables</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.6 Creación de componentes reutilizables</h2>
         <div class="contenedor-listas">
           <ul class="space-y-3">
             <li class="flex">
@@ -183,7 +183,7 @@
 
       <!-- 1.7 Personalización avanzada de la configuración -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.7 Personalización avanzada de la configuración</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.7 Personalización avanzada de la configuración</h2>
         <div class="contenedor-listas">
           <ul class="space-y-3">
             <li class="flex">
@@ -216,7 +216,7 @@
 
       <!-- 1.8 Animaciones y transiciones -->
       <article class="mt-8 p-6">
-        <h2 class="mt-12 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.8 Animaciones y transiciones</h2>
+        <h2 class="mt-12 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.8 Animaciones y transiciones</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Aprender a añadir movimiento a tus componentes puede mejorar la experiencia del usuario.</p>
         <div class="contenedor-listas">
           <ul class="space-y-3">
@@ -242,7 +242,7 @@
 
       <!-- 1.9 Recomendaciones -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">1.9 Recomendaciones</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">1.9 Recomendaciones</h2>
         <div class="contenedor-listas">
           <ul class="space-y-3">
             <li class="flex">
@@ -273,16 +273,14 @@
         </div>
       </article>
 
-      <!-- Ejercicios -->
-      <article class="mt-8 p-6">
-        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-          <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-          <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li><a href="/ejercicios/basicos/tailwind/1" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
-            <li><a href="/ejercicios/basicos/tailwind/2" target="_blank">Cómo añadir tipografías personalizadas utilizando el archivo tailwind.config.js</a></li>
-          </ol>
-        </div>
-      </article>
+      <!-- Ejercicios -->      
+      <article class="mt-4 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
+        <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li><a href="/ejercicios/basicos/tailwind/1" target="_blank">Creación de un botón reutilizable usando @apply.</a></li>
+          <li><a href="/ejercicios/basicos/tailwind/2" target="_blank">Cómo añadir tipografías personalizadas utilizando el archivo tailwind.config.js</a></li>
+        </ol>
+      </article>      
     </section>
 
     <aside id="subtitulos " class="flex-1 h-screen px-3 text-gray-600 md:box-border lg:box-border bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300 flex flex-col">

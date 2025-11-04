@@ -8,7 +8,7 @@
 
       <!-- Container Queries (novedad en Tailwind 4) -->
       <article class="mt-5 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">¿Cómo usar las Container Queries?</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">¿Cómo usar las Container Queries?</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Las container queries permiten aplicar estilos a un elemento en función del tamaño de su contenedor padre, no del viewport. Se usan marcando un contenedor con la clase @container</p>
 
         <div class="contenedor-listas">
@@ -39,15 +39,13 @@
       </article>
 
       <!-- Ejercicios -->
-      <article class="mt-5 p-6">
-        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-          <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-          <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
-          </ol>
-        </div>
+      <article class="mt-4 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
+        <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li><a href="/ejercicios/basicos/tailwind/" target="_blank"></a></li>
+          <li><a href="/ejercicios/basicos/tailwind/" target="_blank"></a></li>
+          <li><a href="/ejercicios/basicos/tailwind/69" target="_blank">Layout de Manuales de TechCode</a></li>
+        </ol>
       </article>
     </section>
 

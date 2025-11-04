@@ -1,7 +1,7 @@
 @layer components {
   /* Clase base para todos los botones */
     .btn {
-      @apply py-2 px-4 rounded transition-colors duration-200;
+      @apply py-2 px-4 w-40 rounded transition-colors duration-200;
     }
   
     /* Variantes de color */
@@ -11,5 +11,21 @@
   
     .btn-secondary {
       @apply bg-gray-300 text-gray-800 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300;
+    }
+
+    .btn-danger {
+      @apply bg-red-500 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500;
+    }
+
+    .btn-warning {
+      @apply bg-yellow-400 text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500;
+    }
+
+    .btn-success{
+      @apply bg-green-500 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500;
+    }
+
+    .btn-info {
+      @apply bg-cyan-400 text-white hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-teal-500;
     }
 }

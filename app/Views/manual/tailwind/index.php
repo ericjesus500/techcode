@@ -41,11 +41,88 @@
     <!-- Contenido del nivel + Busqueda de tema-->
     <section id="nivel-contenido">
         <div class="w-full max-w-full flex md:flex-row lg:flex-row md:box-border lg:box-border">
+            <!-- sidebar -->
+
+            <!-- main -->
             <div class="prose dark:prose-invert w-full max-w-full">
                 <div class="w-full max-w-full p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                    <p class="text-gray-500 dark:text-gray-400">Selecciona un nivel para ver AQUI su contenido.</p>
+                    <h1 class="text-3xl text-gray-600 dark:text-blue-400">INSTALACION DE TAILWIND</h1>
+
+                    <!-- Instalación con la herramienta de línea de comandos -->
+                    <article class="p-4">
+                        <h2 id="home1" class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Instalación con la herramienta de línea de comandos</h2>
+                        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Instalar con la herramienta de línea de comandos (CLI) es la forma más rápida de comenzar a usar Tailwind CSS en un proyecto nuevo o existente. Siga los pasos a continuación para instalar Tailwind CSS utilizando la CLI.</p>
+
+                        <!-- Instalar Tailwind CSS -->
+                        <section class="my-14">
+                            <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-[#00fff5]"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Instalar Tailwind CSS</h3>
+                            <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Instalar tailwindcss y @tailwindcss/cli mediante npm</p>
+                            <div class="mt-10 ml-10 overflow-x-auto">
+                                <pre class="ind-pre rounded overflow-x-auto">
+                                    <code>
+                                        <span class="dark:text-pink-600">npm</span> <span class="dark:text-fuchsia-400">install tailwindcss @tailwindcss/cli</span>
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+
+                        <!-- Importar Tailwind in el CSS -->
+                        <section class="my-14">
+                            <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-[#00fff5]"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Importar Tailwind in el CSS</h3>
+                            <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white"></p>
+                            <div class="mt-10 ml-10 overflow-x-auto">
+                                <pre class="ind-pre rounded overflow-x-auto">
+                                    <code>
+                                        <span class="dark:text-pink-600">@import</span> <span class="dark:text-fuchsia-400">"tailwindcss"</span>;
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+
+                        <!-- Inicio del proceso de  compilación de la CLI-->
+                        <section class="my-14">
+                            <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-[#00fff5]"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Inicio del proceso de compilación de la CLI</h3>
+                            <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Ejecuta la herramienta CLI para escanear tus archivos fuente en busca de clases y generar tu CSS.</p>
+                            <div class="mt-10 ml-10 overflow-x-auto">
+                                <pre class="ind-pre rounded overflow-x-auto">
+                                    <code>
+                                        <span class="dark:text-pink-600">npx</span> <span class="dark:text-fuchsia-400">@tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch</span>
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+
+                        <!-- Comienza a usar Tailwind en tu HTML -->
+                        <section class="my-14">
+                            <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-[#00fff5]"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Comienza a usar Tailwind en tu HTML</h3>
+                            <p class="ml-3 mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-white">Agrega tu archivo CSS compilado al &lt;head&gt; y comienza a usar las clases de utilidad de Tailwind para dar estilo a tu contenido.
+                            </p>
+                            <div class="mt-10 ml-10 overflow-x-auto">
+                                <pre class="ind-pre rounded overflow-x-auto">
+                                    <code>
+                                        &lt;!doctype html&gt;
+                                        &lt;html&gt;
+                                            &nbsp;&nbsp;&nbsp;&lt;head&gt;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport"
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; content="width=device-width, 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;initial-scale=1.0"&gt;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="dark:text-pink-600">link href="./output.css"</span> rel="stylesheet"&gt;
+                                            &nbsp;&nbsp;&nbsp;&lt;/head&gt;
+                                            &nbsp;&nbsp;&nbsp;&lt;body&gt;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="text-3xl font-bold underline"&gt;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello world!
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;
+                                            &nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                                        &lt;/html&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+                    </article>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Modal de la busqueda del header -->

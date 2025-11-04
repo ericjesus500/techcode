@@ -9,10 +9,9 @@
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Los componentes son clases personalizadas que encapsulan patrones de diseño comunes</p>
 
       <!-- La directiva @layer components -->
-      <article>
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">La directiva @layer components</h2>
-        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4"></p>
-        <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Aunque Tailwind es <span class="text-gray-600 dark:text-green-400">"utility-first"</span>, permite crear componentes personalizados para encapsular patrones de diseño repetitivos. En Tailwind 4, se usan las capas nativas de CSS y la directiva @layer components (o la nueva @utility) para definir estas clases personalizadas.</p>
+      <article class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">La directiva @layer components</h2>
+        <p class="mt-8 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Aunque Tailwind es <span class="text-gray-600 dark:text-green-400">"utility-first"</span>, permite crear componentes personalizados para encapsular patrones de diseño repetitivos. En Tailwind 4, se usan las capas nativas de CSS y la <span class="dark:text-orange-500">directiva @layer components</span> (o la nueva @utility) para definir estas clases personalizadas.</p>
         <p class="pathway-extreme-p text-xl underline my-10 text-white">Características:</p>
         <div class="contenedor-listas">
           <ul class="space-y-3">
@@ -43,7 +42,7 @@
           </ul>
         </div>
         <p class="pathway-extreme-p text-xl underline my-10 text-white">Cómo se usan:</p>
-        <div class="mt-10 px-6 bg-red-900 dark:bg-yellow-200 rounded">
+        <div class="mt-10 p-4 bg-red-900 dark:bg-yellow-200 rounded">
           <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-900"><span class="font-mono font-medium text-lg text-gray-950 dark:text-blue-800">1. Definición en CSS</span>: En tu archivo CSS de origen (Por ejemplo src/css/tailwind.css), defines el componente usando la directiva <span class="text-gray-600 dark:text-pink-900">@layer components</span>. En la v4, se puede usar <span class="text-gray-600 dark:text-pink-900">@utility</span> para mayor control, aunque <span class="text-gray-600 dark:text-pink-900">@layer components</span> sigue siendo válido para componentes complejos</p>
         </div>
         <div class="mt-10">
@@ -72,12 +71,12 @@
             </code>
           </pre>
         </div>
-        
+
         <!-- Diferencias entre clases de utilidades y componentes -->
-        <section>
+        <section class="mt-14">
           <h3 class="font-mono font-medium mt-8 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Diferencias entre clases de utilidades y componentes</h3>
 
-          <div class="overflow-x-auto">
+          <div class="overflow-x-auto mt-10 ml-6">
             <table class="table-auto border-separate font-mono">
               <thead>
                 <tr>
@@ -145,18 +144,16 @@
         </section>
       </article>
 
-      <!-- Ejercicios -->
-      <article class="mt-8 p-6">
-        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-          <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-          <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li><a href="./ejercicios/basicos/tailwind/90" target="_blank">Uso de componentes</a></li>
-            <li><a href="/ejercicios/basicos/tailwind/80" target="_blank">Componente de tarjeta en un framework (React)</a></li>
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
-            <li><a href="./ejercicios/basicos/tailwind/" target="_blank"></a></li>
-          </ol>
-        </div>
+      <!-- Ejercicios -->      
+      <article class="mt-4 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
+        <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li><a href="/ejercicios/basicos/tailwind/90" target="_blank">Uso de componentes</a></li>
+          <li><a href="/ejercicios/basicos/tailwind/80" target="_blank">Componente de tarjeta en un framework (React)</a></li>
+          <li><a href="/ejercicios/basicos/tailwind/" target="_blank"></a></li>
+          <li><a href="/ejercicios/basicos/tailwind/" target="_blank"></a></li>
+          <li><a href="/ejercicios/basicos/tailwind/" target="_blank"></a></li>
+        </ol>
       </article>
     </section>
 

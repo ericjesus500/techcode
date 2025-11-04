@@ -9,7 +9,7 @@
 
       <!-- Las clases: w-min, w-max -->
       <article>
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Las clases: w-min, w-max y w-fit</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Las clases: w-min, w-max y w-fit</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Estas clases controlan el tamaño de un elemento basándose en el contenido interno en lugar de en porcentajes o valores fijos. Son esenciales para el diseño responsivo sin desbordamientos.</p>
 
         <div class="my-10 rounded dark:bg-white bg-yellow-50 p-3">
@@ -161,7 +161,7 @@
 
       <!-- Clase: min-w-0, min-h-0 -->
       <article>
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Clase: min-w-0, min-h-0</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Clase: min-w-0, min-h-0</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5"></p>
         <div class="my-10 rounded dark:bg-white bg-yellow-50 p-3">
           <p class="text-xl my-5 text-gray-600 font-extrabold font-mono">Propiedad CSS: <span class="dark:text-pink-600 font-bold">min-width: 0;, min-height: 0;</span></p>
@@ -185,7 +185,7 @@
 
       <!-- La Clase aspect-ratio -->
       <article>
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">La Clase aspect-ratio</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">La Clase aspect-ratio</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Esta clase es fundamental para el layout moderno que maneja imágenes, videos o placeholders responsivos sin depender de hacks de padding o JavaScript. Se aplican al contenedor padre del elemento que debe mantener la proporción.</p>
         <div class="overflow-x-aut mt-6">
           <table class="table-auto border-separate font-mono">
@@ -251,7 +251,7 @@
 
       <!-- La Nomenclatura del Cero (0) y la Unidad Fraccional en Grid -->
       <article>
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">La Nomenclatura del Cero (0) y la Unidad Fraccional en Grid</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">La Nomenclatura del Cero (0) y la Unidad Fraccional en Grid</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Esta sintaxis es la joya de la corona en Tailwind 4.0 para el layout. Permite usar cualquier valor de CSS directamente en la clase sin tocar el archivo de configuración, ideal para Grid.</p>
 
         <!-- Las clases: grid-cols-0 / grid-rows-0 -->
@@ -329,7 +329,7 @@
 
       <!-- Responsividad y el order en Flex/Grid -->
       <article>
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Responsividad y el order en Flex/Grid</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Responsividad y el order en Flex/Grid</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">El uso responsivo del order es una técnica de accesibilidad crucial para asegurar que el orden del código fuente (importante para lectores de pantalla) difiera del orden visual de la página.</p>
 
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">La clase order solo cambia la presentación visual, no el orden real del código HTML (DOM).</p>

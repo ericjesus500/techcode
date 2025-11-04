@@ -10,7 +10,7 @@
 
       <!-- 8.1 Creación del archivo tailwind.config.js -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">8.1 Creación del archivo tailwind.config.js</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">8.1 Creación del archivo tailwind.config.js</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Para crear el archivo tailwind.config.js, puedes utilizar el siguiente comando en tu terminal:</p>
         <pre class="rounded overflow-x-auto my-6">
           <code class="language-bash">npx tailwindcss init</code>
@@ -19,7 +19,7 @@
 
       <!-- 8.2 Estructura del archivo tailwind.config.js -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">8.2 Estructura del archivo tailwind.config.js</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">8.2 Estructura del archivo tailwind.config.js</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">El archivo tailwind.config.js generado tendrá una estructura básica similar a la siguiente:</p>
         <pre class="rounded overflow-x-auto my-6">
           <code class="language-javascript">module.exports = {
@@ -105,7 +105,7 @@
 
       <!-- 8.3 Personalización o Extensión del Tema (theme) -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">8.3 Personalización o Extensión del Tema (theme)</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">8.3 Personalización o Extensión del Tema (theme)</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Este es el caso de uso más común. Si necesitas agregar, modificar o extender los valores predeterminados para colores, tipografías, espaciados, tamaños de pantalla (breakpoints), etc., el archivo tailwind.config.js es indispensable.</p>
 
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Puedes personalizar o extender el tema predeterminado de Tailwind CSS dentro del objeto theme en el archivo tailwind.config.js. Esto te permite adaptar el diseño a las necesidades específicas de tu proyecto.</p>
@@ -213,7 +213,7 @@
 
       <!-- 8.4 Plugins personalizados o de terceros -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">8.4 Plugins personalizados o de terceros</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">8.4 Plugins personalizados o de terceros</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Si deseas agregar funcionalidades adicionales a Tailwind CSS, como formularios, tipografías avanzadas, o cualquier otra característica, puedes utilizar plugins oficiales o de terceros. Estos plugins se configuran en el archivo tailwind.config.js dentro de la propiedad plugins.</p>
 
         <!-- Plugins oficiales o de trerceros -->
@@ -336,7 +336,7 @@
 
       <!-- 8.5 Configuraciòn avanzada del núcleo -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">8.5 Configuraciòn avanzada del núcleo</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">8.5 Configuraciòn avanzada del núcleo</h2>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Tailwind CSS permite una configuración avanzada del núcleo a través del archivo tailwind.config.js. Puedes habilitar o deshabilitar ciertas funcionalidades, ajustar el comportamiento predeterminado y optimizar el rendimiento de tu proyecto.</p>
         <p class="pathway-extreme-p text-lg text-gray-600 dark:text-gray-300 mb-4">Por ejemplo, puedes deshabilitar ciertas utilidades que no necesitas para reducir el tamaño del archivo CSS generado:</p>
 

@@ -8,7 +8,7 @@
 
       <!-- Configurando Tailwind 4 -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Configurando Tailwind 4</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Configurando Tailwind 4</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">A diferencia de versiones anteriores, Tailwind 4 se configura principalmente dentro de un archivo CSS utilizando directivas específicas, en lugar de un archivo <span class="text-gray-600 dark:text-green-400">tailwind.config.js</span></p>
 
         <div class="contenedor-listas mt-10">

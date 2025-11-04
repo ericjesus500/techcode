@@ -9,7 +9,7 @@
 
       <!-- Utilidades -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Utilidades</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Utilidades</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 my-4">Las utilidades son la base de Tailwind, su enfoque es "utility-first". Son atajos para propiedades CSS comunes que permiten construir interfaces directamente en el marcado HTML. En la versión 4, su uso se ha simplificado y optimizado.</p>
 
         <p class="pathway-extreme-p text-xl underline my-10 text-gray-600 dark:text-white">Características:</p>
@@ -58,7 +58,7 @@
             </code>
           </pre>
         </div>
-        
+
         <!-- Diferencias entre clases de utilidades y componentes -->
         <section>
           <h3 class="font-mono font-medium mt-14 text-xl text-gray-950 dark:text-green-500"><i class="bi bi-caret-right-fill px-2 text-lg"></i>Diferencias entre clases de utilidades y componentes</h3>
@@ -133,7 +133,7 @@
 
       <!-- Clases de utilidad para Layout -->
       <article class="mt-8 p-6">
-        <h2 class="mt-10 font-mono text-2xl text-gray-300 dark:text-yellow-400">Clases de utilidad para Layout</h2>
+        <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Clases de utilidad para Layout</h2>
 
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">
           Tailwind ofrece una amplia gama de clases de utilidad específicas para el diseño de layouts. Estas clases permiten controlar la disposición y el comportamiento de los elementos en la página de manera eficiente. Algunas de las categorías principales incluyen:
@@ -461,14 +461,12 @@
       </article>
 
       <!-- Ejercicios -->
-      <article class="mt-8 p-6">
-        <div class="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-6">
-          <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
-          <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li><a href="./ejercicios/basicos/tailwind/30" target="_blank">Uso de clases de utilidad</a></li>
-            <li><a href="./ejercicios/basicos/tailwind/31" target="_blank">Práctica creación de un modal</a></li>
-          </ol>
-        </div>
+      <article class="mt-4 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
+        <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li><a href="./ejercicios/basicos/tailwind/30" target="_blank">Uso de clases de utilidad</a></li>
+          <li><a href="./ejercicios/basicos/tailwind/31" target="_blank">Práctica creación de un modal</a></li>
+        </ol>
       </article>
     </section>
 
