@@ -7,7 +7,7 @@
       <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">En este capítulo, exploraremos las clases de utilidad que Tailwind CSS ofrece para crear layouts efectivos y responsivos. Estas clases facilitan la organización y disposición de los elementos en una página web, permitiendo a los desarrolladores construir interfaces de usuario atractivas y funcionales con facilidad.</p>
 
       <!-- La clase container -->
-      <article id="cl_container" class="p-6">
+      <article id="tailwind4-item1" class="p-6">
         <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">La clase container</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">La clase <code><span class="text-xl text-gray-600 dark:text-green-300">container</span></code> en Tailwind CSS es una utilidad esencial para crear layouts responsivos y centrados. Esta clase ajusta automáticamente el ancho máximo de un elemento según el tamaño de la pantalla, lo que facilita la creación de diseños que se adaptan a diferentes dispositivos.</p>
 
@@ -184,7 +184,7 @@
       </article>
 
       <!-- La clase flexbox -->
-      <article id="cl_flex" class="p-6">
+      <article id="tailwind4-item2" class="p-6">
         <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">La clase Flexbox</h2>
         <p class="pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4 mt-5">Flexbox, o Flexible Box Layout, es un modelo de diseño en CSS que permite distribuir espacio entre los elementos de una interfaz y alinear contenido de manera eficiente dentro de un contenedor, incluso cuando su tamaño es desconocido o dinámico. Tailwind CSS proporciona una serie de clases de utilidad que facilitan la implementación de Flexbox en tus proyectos web.</p>
 
@@ -878,7 +878,7 @@
       </article>
 
       <!-- La clase grid -->
-      <article id="cl_grid" class="p-6">
+      <article id="tailwind4-item3" class="p-6">
         <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">La clase Grid</h2>
         <p class="mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">CSS Grid es un sistema de diseño bidimensional (cuadrícula) que permite crear layouts complejos dividiendo el espacio en filas y columnas. A diferencia de Flexbox, que es unidimensional, Grid facilita la organización tanto horizontal como vertical de los elementos.</p>
         <p class="mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">La clase grid es la utilidad inicial que transforma un elemento HTML en un contenedor de rejilla (Grid Container), lo que permite aplicar todas las demás utilidades de Grid a sus hijos.</p>
@@ -1257,7 +1257,7 @@
       </article>
 
       <!-- Combinando las clases Container, Flex y Grid -->
-      <article id="cl_combinacion" class="p-6">
+      <article id="tailwind4-item4" class="p-6">
         <h2 class="mt-10 font-mono text-3xl text-gray-300 dark:text-yellow-400">Combinando las clases Container, Flex y Grid</h2>
         <p class="mt-5 pathway-extreme-p text-xl text-gray-600 dark:text-gray-300 mb-4">Es muy común combinar las clases container, flex, y grid en Tailwind CSS 4.0. De hecho, esta combinación representa una práctica profesional estándar para construir diseños web complejos y responsivos.</p>
 
@@ -1382,7 +1382,7 @@
       </article>
 
       <!-- Ejercicios -->
-      <article id="cap4_ejercicios" class="border mt-4 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
+      <article id="tailwind4-item5" class="mt-4 p-6 bg-blue-50 dark:bg-blue-900/30 border rounded-lg">
         <h4 class="text-xl font-mono text-blue-800 dark:text-blue-300 mb-2">✏️ Ejercicios</h4>
         <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
           <li><a href="/ejercicios/basicos/tailwind/40" target="_blank">Uso de la clase <span class="text-blue-600 dark:text-green-300">container</span></a></li>
@@ -1397,21 +1397,26 @@
       </div>
       <div class="content-subtitulos h-auto mt-6 relative">
         <ul>
-          <li class="flex items-base"><svg class="block mt-1 me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M9 21V3h2v18zm4-4V7l5 5z" />
-            </svg><a class="block font-mono text-base" href="#cl_container">La clase container</a></li>
-          <li class="flex items-base"><svg class="block mt-1 me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M9 21V3h2v18zm4-4V7l5 5z" />
-            </svg><a class="block font-mono text-base" href="#cl_flex">La clase flex</a></li>
-          <li class="flex items-base"><svg class="block mt-1 me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M9 21V3h2v18zm4-4V7l5 5z" />
-            </svg><a class="block font-mono text-base" href="#cl_grid">La clase grid</a></li>
-          <li class="flex items-base"><svg class="block mt-1 me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M9 21V3h2v18zm4-4V7l5 5z" />
-            </svg><a class="block font-mono text-base" href="#cl_combinacion">Combinando las 3 clases</a></li>
-          <li class="flex items-base"><svg class="block mt-1 me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M9 21V3h2v18zm4-4V7l5 5z" />
-            </svg><a class="block font-mono text-base" href="#cap4_ejercicios">Ejercicios</a></li>
+          <li class="flex items-base">
+            <i class="bi bi-caret-right-fill"></i>
+            <a class="block font-mono text-base" href="#tailwind4-item1">La clase container</a>
+          </li>
+          <li class="flex items-base">
+            <i class="bi bi-caret-right-fill"></i>
+            <a class="block font-mono text-base" href="#tailwind4-item2">La clase flex</a>
+          </li>
+          <li class="flex items-base">
+            <i class="bi bi-caret-right-fill"></i>
+            <a class="block font-mono text-base" href="#tailwind4-item3">La clase grid</a>
+          </li>
+          <li class="flex items-base">
+            <i class="bi bi-caret-right-fill"></i>
+            <a class="block font-mono text-base" href="#tailwind4-item4">Combinando las 3 clases</a>
+          </li>
+          <li class="flex items-base">
+            <i class="bi bi-caret-right-fill"></i>
+            <a class="block font-mono text-base" href="#tailwind4-item5">Ejercicios</a>
+          </li>
         </ul>
       </div>
     </aside>

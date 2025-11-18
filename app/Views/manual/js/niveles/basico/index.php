@@ -12,16 +12,21 @@
       </svg>
     </button>
   </div>
-
   <div id="lista-capitulos" class="mx-auto p-3 rounded border border-gray-600 bg-yellow-600 dark:bg-yellow-50 dark:border-gray-300
       transition-all duration-300 ease-in-out">
     <ul class="capitulos flex flex-col">
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="1">Capitulo 1: </a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="2">Capitulo 2: </a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="3">Capitulo 3: </a></li>
-      <li><a class="my-2 dark:text-gray-700 cursor-pointer" data-curso="js" data-nivel="basico" data-capitulo="4">Capitulo 4: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="1">Capitulo 1: Fundamentos</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="2">Capitulo 2: Sintaxis, Tipos de datos y Operadores Básicos</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="3">Capitulo 3: Strings</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="4">Capitulo 4: Métodos y propiedades de los Strings</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="5">Capitulo 5: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="6">Capitulo 6: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="7">Capitulo 7: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="8">Capitulo 8: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="9">Capitulo 9: </a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="10">Capitulo 10</a></li>
+      <li><a class="my-2 dark:text-gray-700 cursor-pointer block" data-curso="js" data-nivel="basico" data-capitulo="11">Capitulo 11: </a></li>
     </ul>
   </div>
-
-  <div id="content-capitulo" class="box-border"></div>
+  <div id="content-capitulo" class="w-full max-w-full box-border min-w-0"></div>
 </section>
